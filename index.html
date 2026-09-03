@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prabu S — Freelance software and cloud engineer</title>
+<meta name="description" content="Freelance software and cloud engineer. I modernize legacy systems, migrate workloads to the cloud, and build AI-enabled features. 7+ years, AWS and Azure certified.">
+
+<!-- Prabu S - portfolio. Single file, no build step. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#EDF0EF;
+    --paper-2:#E3E8E7;
+    --ink:#13222A;
+    --steel:#5F7684;
+    --rule:#CFD8D7;
+    --after:#0B6E8C;
+    --before:#9DACB5;
+    --measure:34rem;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;font-weight:700;letter-spacing:-.02em;margin:0;line-height:1.08;}
+  p{margin:0 0 1em;max-width:var(--measure);}
+  a{color:var(--after);text-underline-offset:.18em;text-decoration-thickness:1px;}
+  a:focus-visible{outline:2px solid var(--after);outline-offset:3px;border-radius:2px;}
+
+  .wrap{max-width:60rem;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;}
+  section{padding-top:3.5rem;padding-bottom:3.5rem;border-top:1px solid var(--rule);}
+  section:first-of-type{border-top:0;}
+  h2{font-size:1.55rem;margin-bottom:1.4rem;}
+
+  /* ---------- masthead ---------- */
+  .masthead{padding-top:4.5rem;padding-bottom:3rem;}
+  .who{
+    font-size:.95rem;color:var(--steel);margin-bottom:1.6rem;
+    display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;
+  }
+  .who strong{color:var(--ink);font-weight:600;}
+  h1{font-size:clamp(2.1rem,6.2vw,3.5rem);max-width:20ch;}
+  .lede{font-size:1.12rem;margin-top:1.4rem;max-width:38rem;color:#22343E;}
+
+  .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;}
+  .btn{
+    display:inline-block;padding:.7rem 1.15rem;border-radius:3px;
+    font-size:.95rem;font-weight:600;text-decoration:none;
+    border:1.5px solid var(--after);
+  }
+  .btn-solid{background:var(--after);color:#fff;}
+  .btn-ghost{color:var(--after);background:transparent;}
+  .btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+
+  /* ---------- the before/after band ---------- */
+  .shift{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:#fff;}
+  .col{padding:1.6rem 1.5rem;}
+  .col + .col{border-left:1px solid var(--rule);}
+  .col-before{background:var(--paper-2);}
+  .col h3{
+    font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:.85rem;
+    letter-spacing:.02em;margin-bottom:1rem;
+  }
+  .col-before h3{color:var(--steel);}
+  .col-after h3{color:var(--after);}
+  .col ul{margin:0;padding:0;list-style:none;}
+  .col li{padding:.5rem 0;border-top:1px solid var(--rule);font-size:.96rem;}
+  .col li:first-child{border-top:0;}
+  .col-before li{color:var(--steel);}
+
+  /* single load reveal */
+  .shift .col-after{opacity:0;transform:translateY(6px);animation:settle .7s .35s cubic-bezier(.2,.7,.3,1) forwards;}
+  @keyframes settle{to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion:reduce){
+    .shift .col-after{animation:none;opacity:1;transform:none;}
+  }
+
+  /* ---------- plain definition rows ---------- */
+  .rows{border-top:1px solid var(--rule);}
+  .row{padding:1.1rem 0;border-bottom:1px solid var(--rule);}
+  .row h3{font-size:1.02rem;margin-bottom:.3rem;}
+  .row p{margin:0;color:#2C3E48;font-size:.98rem;max-width:46rem;}
+
+  /* ---------- steps (a real sequence) ---------- */
+  .steps{counter-reset:s;display:grid;gap:1.3rem;}
+  .step{display:grid;grid-template-columns:2.1rem 1fr;gap:1rem;align-items:start;}
+  .step::before{
+    counter-increment:s;content:counter(s);
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.05rem;
+    color:var(--after);border:1.5px solid var(--after);border-radius:50%;
+    width:2.1rem;height:2.1rem;display:grid;place-items:center;
+  }
+  .step h3{font-size:1.02rem;margin-bottom:.25rem;}
+  .step p{margin:0;font-size:.98rem;color:#2C3E48;}
+
+  /* ---------- engagements ---------- */
+  .eng{padding:1.5rem 0;border-bottom:1px solid var(--rule);}
+  .eng:first-of-type{border-top:1px solid var(--rule);}
+  .eng-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .8rem;margin-bottom:.6rem;}
+  .eng-head h3{font-size:1.1rem;}
+  .eng-org{color:var(--steel);font-size:.95rem;}
+  .eng-when{color:var(--steel);font-size:.88rem;margin-left:auto;white-space:nowrap;}
+  .eng ul{margin:0;padding-left:1.05rem;}
+  .eng li{margin-bottom:.35rem;font-size:.97rem;color:#2C3E48;}
+
+  /* ---------- projects ---------- */
+  .proj{padding:1.3rem 0;border-bottom:1px solid var(--rule);}
+  .proj:first-of-type{border-top:1px solid var(--rule);}
+  .proj h3{font-size:1.05rem;margin-bottom:.35rem;}
+  .proj p{margin:0 0 .5rem;font-size:.97rem;color:#2C3E48;max-width:46rem;}
+  .repo{font-size:.9rem;font-weight:600;}
+  .built{font-size:.88rem;color:var(--steel);margin:0;}
+  .built b{color:var(--ink);font-weight:600;}
+
+  /* ---------- stack ---------- */
+  .stack{display:grid;gap:1.1rem;}
+  .stack div{display:grid;grid-template-columns:11rem 1fr;gap:1rem;padding-bottom:1.1rem;border-bottom:1px solid var(--rule);}
+  .stack dt{font-weight:600;font-size:.93rem;}
+  .stack dd{margin:0;color:#2C3E48;font-size:.95rem;}
+
+  /* ---------- contact ---------- */
+  .contact p{font-size:1.05rem;max-width:40rem;}
+  .contact .big{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(1.4rem,4vw,2rem);letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem;}
+  footer{padding-top:2.5rem;padding-bottom:3.5rem;color:var(--steel);font-size:.87rem;border-top:1px solid var(--rule);}
+
+  @media (max-width:640px){
+    body{font-size:16px;}
+    .shift{grid-template-columns:1fr;}
+    .col + .col{border-left:0;border-top:1px solid var(--rule);}
+    .stack div{grid-template-columns:1fr;gap:.25rem;}
+    .eng-when{margin-left:0;width:100%;}
+    section{padding-top:2.6rem;padding-bottom:2.6rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead wrap">
+  <div class="who">
+    <span><strong>Prabu S</strong></span>
+    <span>Freelance software &amp; cloud engineer</span>
+    <span>Remote, worldwide</span>
+  </div>
+
+  <h1>I rebuild systems that have outgrown the way they were first built.</h1>
+
+  <p class="lede">Nearly six years of enterprise delivery across healthcare, real-time communications, and cloud
+  consulting. I take on the awkward work: the monolith nobody wants to touch, the on-premises stack that needs to
+  move, the release process that still runs by hand.</p>
+
+  <div class="actions">
+    <a class="btn btn-solid" href="mailto:prabusampath007@gmail.com">Email me your problem</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/prabu-s-a1893018b">Connect on LinkedIn</a>
+  </div>
+</header>
+
+<section class="wrap">
+  <h2>What changes when I finish</h2>
+  <div class="shift">
+    <div class="col col-before">
+      <h3>What you have now</h3>
+      <ul>
+        <li>One large codebase, slow and risky to change</li>
+        <li>Business rules known only to whoever wrote them</li>
+        <li>Servers you maintain, environments you rebuild by hand</li>
+        <li>Releases that need a person and a checklist</li>
+        <li>Problems found when a customer calls</li>
+      </ul>
+    </div>
+    <div class="col col-after">
+      <h3>What you have after</h3>
+      <ul>
+        <li>Services that can be changed and deployed separately</li>
+        <li>Behaviour documented and covered before it moves</li>
+        <li>Containers on managed infrastructure, defined in code</li>
+        <li>Deploys that run themselves on every merge</li>
+        <li>Dashboards and alerts that speak first</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>What I take on</h2>
+  <div class="rows">
+    <div class="row">
+      <h3>Legacy modernization</h3>
+      <p>Aging monoliths and inherited codebases in any language, re-architected into maintainable services. The
+      migration runs in stages so the business keeps operating while it happens.</p>
+    </div>
+    <div class="row">
+      <h3>Architecture and technical advisory</h3>
+      <p>Reviewing an existing system, mapping the business logic nobody wrote down, defining where it should end up,
+      and producing a scoped plan. Often the first small piece of work before anything bigger.</p>
+    </div>
+    <div class="row">
+      <h3>Cloud migration</h3>
+      <p>On-premises and self-hosted workloads onto any major cloud, with containers, orchestration, and infrastructure
+      defined as code so environments stop drifting apart.</p>
+    </div>
+    <div class="row">
+      <h3>Backend, API, and integration work</h3>
+      <p>Services and APIs across several languages and frameworks: REST, SOAP, event-driven messaging, third-party
+      integrations, and serverless functions.</p>
+    </div>
+    <div class="row">
+      <h3>Full-stack application delivery</h3>
+      <p>React and Angular front ends wired to .NET or Node.js services, with the database, API layer, and deployment
+      handled by the same person. Useful when you would rather brief one engineer on a whole feature than coordinate a
+      front-end contractor and a back-end one.</p>
+    </div>
+    <div class="row">
+      <h3>AI features and AI-assisted delivery</h3>
+      <p>Features backed by large language models: semantic search over your own documents, summarization,
+      conversational interfaces, and speech-to-text. I also use AI coding assistants in daily delivery, which is part
+      of why fixed-price scopes come back shorter than they used to.</p>
+    </div>
+    <div class="row">
+      <h3>Deployment pipelines and production support</h3>
+      <p>Automated build, test, release, and provisioning, plus monitoring, alerting, and incident response. Available
+      as an ongoing retainer for teams with no dedicated on-call engineer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>How an engagement runs</h2>
+  <div class="steps">
+    <div class="step">
+      <div>
+        <h3>You describe the problem</h3>
+        <p>An email is enough to start. No charge for the first conversation, and no obligation after it.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div>
+        <h3>I come back with a scope and a price</h3>
+        <p>Written scope, milestones, and a fixed price before any code is written. If the work turns out to be smaller
+        than it looked, I say so.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div>
+        <h3>We build in visible increments</h3>
+        <p>Weekly demos against the milestones. Everything lives in your repository and your cloud account from day one,
+        so nothing depends on me at handover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Selected work</h2>
+
+  <div class="eng">
+    <div class="eng-head">
+      <h3>Lead Software Engineer</h3>
+      <span class="eng-org">Capsa Healthcare</span>
+      <span class="eng-when">Aug 2026 &ndash; present</span>
+    </div>
+    <ul>
+      <li>Modernized a legacy order-processing workflow, moving it off PHP and MSSQL stored procedures onto .NET
+      microservices with MassTransit and the Saga pattern for distributed transaction handling.</li>
+      <li>Owned the assessment of the existing system, the target architecture, and the incremental migration path.</li>
+      <li>Recovered and documented business rules that existed only inside the legacy code, which is what made the
+      replacement safe to roll out.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="eng-head">
+      <h3>Senior Engineer II</h3>
+      <span class="eng-org">EY</span>
+      <span class="eng-when">Nov 2025 &ndash; Aug 2026</span>
+    </div>
+    <ul>
+      <li>Led migration of enterprise applications and containerized workloads from on-premises infrastructure to AWS EKS.</li>
+      <li>Built backend services with .NET Core, ASP.NET Web API, REST and SOAP endpoints, and microservices architecture.</li>
+      <li>Delivered cloud-native deployments across Azure and AWS using Kubernetes, Docker, and container best practices.</li>
+      <li>Implemented CI/CD in GitHub Actions and established DevOps practices for automated deployment.</li>
+      <li>Designed monitoring and observability with Amazon CloudWatch and Grafana for production support and tuning.</li>
+      <li>Worked directly with client stakeholders on requirements, solution design, and end-to-end delivery.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="eng-head">
+      <h3>Senior Engineer</h3>
+      <span class="eng-org">Presidio</span>
+      <span class="eng-when">Jun 2023 &ndash; Nov 2025</span>
+    </div>
+    <ul>
+      <li>Developed scalable full-stack applications using .NET Core, React, and microservices architecture.</li>
+      <li>Designed and implemented REST APIs and SOAP web services for enterprise integration.</li>
+      <li>Worked extensively on Azure development, Azure SQL integration, and enterprise-scale cloud architecture.</li>
+      <li>Built and managed CI/CD pipelines with GitHub Actions, Terraform, and Azure DevOps.</li>
+      <li>Deployed containerized applications with Docker and Kubernetes across Azure and AWS.</li>
+      <li>Contributed to architecture discussions, requirement analysis, code review, and production support.</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <div class="eng-head">
+      <h3>Software Engineer, then Associate Software Developer</h3>
+      <span class="eng-org">Presidio</span>
+      <span class="eng-when">Nov 2020 &ndash; Jun 2023</span>
+    </div>
+    <ul>
+      <li>Designed and deployed event-driven microservices and containerized workloads using Docker, Kubernetes, and AWS ECS.</li>
+      <li>Built backend services with Node.js, .NET, REST APIs, SOAP integrations, and Apache Kafka.</li>
+      <li>Delivered cloud applications across Azure, AWS, and Google Cloud Platform for workflow automation and request processing.</li>
+      <li>Integrated Azure SQL, MongoDB, and enterprise communication platforms for real-time healthcare and workflow systems.</li>
+      <li>Built CI/CD pipelines and infrastructure as code with Terraform and GitHub Actions.</li>
+      <li>Supported the full lifecycle: development, deployment, monitoring, troubleshooting, and production support.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Projects and builds</h2>
+  <p style="max-width:46rem">Most of my delivery has been full-stack: the interface, the services behind it, the data
+  layer, and the pipeline that ships it. A sample of what that has looked like.</p>
+
+  <div class="proj">
+    <h3>Enterprise full-stack applications</h3>
+    <p>Client applications built end to end over several years at Presidio: React and Angular front ends on .NET Core
+    and Node.js services, integrated with Azure SQL, SQL Server, and MongoDB, exposed through REST APIs and SOAP web
+    services, and deployed as containers on Azure and AWS.</p>
+    <p class="built"><b>Front end:</b> React, Angular, JavaScript, TypeScript &nbsp; <b>Back end:</b> .NET Core, ASP.NET
+    Web API, Node.js &nbsp; <b>Data:</b> Azure SQL, SQL Server, MongoDB &nbsp; <b>Delivery:</b> Docker, Kubernetes,
+    GitHub Actions</p>
+  </div>
+
+  <div class="proj">
+    <h3>AIGen — healthcare AI platform</h3>
+    <p>A cloud-native platform with a React interface over a Python service layer, doing speech-to-text processing,
+    semantic search across medical documents, summarization, and AI-assisted diagnostics. Full-stack in the literal
+    sense: the upload and review screens, the retrieval pipeline, the vector store, and the AWS infrastructure.</p>
+    <p class="built"><b>Front end:</b> React &nbsp; <b>Back end:</b> Python &nbsp; <b>Data:</b> vector database,
+    embeddings &nbsp; <b>Cloud:</b> AWS</p>
+  </div>
+
+  <div class="proj">
+    <h3>Chat Accelerator — reusable chatbot modules</h3>
+    <p>Full-stack accelerator components for enterprise chatbots: the conversational front end, the service layer
+    handling the model calls and session state, and the integration points into client systems. Reused across multiple
+    client implementations so each new build starts from something working.</p>
+    <p class="built"><b>Front end:</b> React chat interface &nbsp; <b>Back end:</b> Node.js, .NET, LLM APIs
+    &nbsp; <b>Reuse:</b> dropped into multiple client projects</p>
+  </div>
+
+  <div class="proj">
+    <h3>Event-driven microservices framework</h3>
+    <p>A serverless reference architecture using AWS CDK, event-driven patterns, and cloud-native deployment models.
+    Backend-only by design — the starting point I reach for when a system needs to scale by events rather than by
+    request volume.</p>
+    <p class="built"><b>Back end:</b> .NET, serverless functions &nbsp; <b>Infrastructure:</b> AWS CDK, event-driven
+    messaging</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Stack</h2>
+  <dl class="stack">
+    <div><dt>Languages</dt><dd>C#, .NET Core, ASP.NET Web API, Node.js, Python, JavaScript, TypeScript</dd></div>
+    <div><dt>Front end</dt><dd>React, Angular, HTML5, CSS3</dd></div>
+    <div><dt>AI</dt><dd>LLM APIs, retrieval-augmented generation, vector databases, embeddings, semantic search, speech-to-text, prompt engineering, Claude Code, GitHub Copilot</dd></div>
+    <div><dt>Architecture</dt><dd>Microservices, event-driven architecture, Saga pattern, MassTransit, REST, SOAP, distributed systems, serverless</dd></div>
+    <div><dt>Cloud</dt><dd>AWS, Microsoft Azure, Google Cloud Platform, EKS, ECS, Lambda, Azure SQL</dd></div>
+    <div><dt>Infrastructure</dt><dd>Docker, Kubernetes, Terraform, AWS CDK, CloudFormation, GitHub Actions, Azure DevOps</dd></div>
+    <div><dt>Data and messaging</dt><dd>SQL Server, MSSQL stored procedures, Azure SQL, MongoDB, Apache Kafka</dd></div>
+    <div><dt>Operations</dt><dd>Amazon CloudWatch, Grafana, incident response, production support</dd></div>
+    <div><dt>Certifications</dt><dd>AWS Certified Solutions Architect &ndash; Professional &nbsp;&nbsp; HashiCorp Certified: Terraform Associate</dd></div>
+  </dl>
+</section>
+
+<section class="wrap contact">
+  <p class="big">Have a system that needs modernizing, migrating, or stabilizing?</p>
+  <p>Send me what is going wrong and I will come back with a scope, a timeline, and a fixed price. The first
+  conversation costs nothing.</p>
+  <div class="actions">
+    <a class="btn btn-solid" href="mailto:prabusampath007@gmail.com">prabusampath007@gmail.com</a>
+    <a class="btn btn-ghost" href="tel:+918825851811">+91 88258 51811</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/prabu-s-a1893018b">LinkedIn</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  Prabu S — freelance software and cloud engineer, working remotely with clients worldwide.
+</footer>
+
+</body>
+</html>
