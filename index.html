@@ -3,174 +3,280 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NexaForge AI by Prabu S — Web, mobile, cloud and AI software for your business</title>
-<meta name="description" content="NexaForge AI builds custom web apps, mobile apps, cloud solutions and AI agents for any business, at a fixed, affordable price. Run by Prabu S, 6 years of enterprise delivery, AWS Certified Solutions Architect – Professional.">
-<meta property="og:title" content="NexaForge AI — Software built around your business">
-<meta property="og:description" content="Web apps, mobile apps, cloud and AI agents for medical, pharmacy, retail, education, finance, textile and more. Fixed price, weekly demos, your code from day one.">
+<title>Trueforge AI — Software that grows your business</title>
+<meta name="description" content="Billing, stock, bookings, online orders and AI assistants built for your business at a fixed price. Web apps, mobile apps, cloud and AI by Prabu S, AWS Certified Solutions Architect – Professional.">
+<meta property="og:title" content="Trueforge AI — Run your business on an app made for you">
+<meta property="og:description" content="Pharmacy, clinic, shop, school, textile, restaurant, booking and finance apps. Free first conversation, fixed price, you own the code.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C8F560'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%230A0F1F'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C8F560'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%230B1324'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ground:#F5F7FB; --surface:#FFFFFF; --surface-2:#EDF1F8; --line:#D6DCEA;
-  --text:#0A0F1F; --muted:#46516F; --accent:#C8F560; --on-accent:#0A0F1F; --accent-text:#3F6600;
-  --radius-lg:22px; --radius:14px;
-  color-scheme: light;
+  --ground:#F4F6FA; --surface:#FFFFFF; --surface-2:#E9EDF5; --line:#D5DBE8;
+  --text:#0B1324; --muted:#47526B; --accent:#C8F560; --on-accent:#0B1324; --accent-text:#3D6200;
+  --ink:#0B1324; --ink-2:#141E38; --ink-line:#27345C; --ink-text:#F4F6FB; --ink-muted:#AEB8D2;
+  color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#0A0F1F; --surface:#111934; --surface-2:#0E152B; --line:#26335E;
-    --text:#F4F6FB; --muted:#A8B3CF; --accent-text:#C8F560;
-    color-scheme: dark;
+    --ground:#0A0F1F; --surface:#121A33; --surface-2:#0E152B; --line:#27345C;
+    --text:#F4F6FB; --muted:#AEB8D2; --accent-text:#C8F560;
+    --ink:#060A16; --ink-2:#111934;
+    color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --ground:#0A0F1F; --surface:#111934; --surface-2:#0E152B; --line:#26335E;
-  --text:#F4F6FB; --muted:#A8B3CF; --accent-text:#C8F560; color-scheme: dark;
+  --ground:#0A0F1F; --surface:#121A33; --surface-2:#0E152B; --line:#27345C;
+  --text:#F4F6FB; --muted:#AEB8D2; --accent-text:#C8F560; --ink:#060A16; --ink-2:#111934; color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
-body{margin:0;background:var(--ground);color:var(--text);font-family:'Space Grotesk','Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0px)}
-img{max-width:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--ground);color:var(--text);font-family:'Space Grotesk','Noto Sans Tamil','Nirmala UI','Latha','Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0px)}
 a{color:var(--accent-text)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-h1,h2,h3{line-height:1.1;letter-spacing:-0.025em;margin:0}
-h2{font-size:clamp(32px,4.2vw,48px);font-weight:700;max-width:18ch}
+:focus-visible{outline:3px solid #7FB800;outline-offset:3px;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{line-height:1.08;letter-spacing:-0.025em;margin:0}
+h2{font-size:clamp(32px,4.4vw,52px);font-weight:700;max-width:20ch}
 h3{font-size:21px;font-weight:600;letter-spacing:-0.01em}
 p{margin:0}
-.lede{color:var(--muted);font-size:19px;max-width:62ch}
-section{padding:96px 0}
-.section-head{display:flex;flex-direction:column;gap:16px;margin-bottom:44px}
+.lede{color:var(--muted);font-size:19px;max-width:60ch}
+section{padding:100px 0}
+.head{display:flex;flex-direction:column;gap:16px;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 17px/1 'Space Grotesk','Noto Sans Tamil',system-ui,sans-serif;text-decoration:none;border:1.5px solid transparent;cursor:pointer;background:none;color:inherit}
+.btn-accent{background:var(--accent);color:var(--on-accent)}
+.btn-accent:hover{filter:brightness(1.05)}
+.btn-dark{background:var(--text);color:var(--ground)}
+.btn-line{border-color:var(--line)}
+.btn-line:hover{border-color:var(--text)}
+svg.i{width:22px;height:22px;flex:0 0 22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* nav */
+/* language switch */
+.lang{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+.lang button{min-height:38px;min-width:44px;padding:0 12px;border:0;border-radius:999px;background:transparent;color:var(--text);font:600 15px 'Space Grotesk','Noto Sans Tamil',system-ui,sans-serif;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--text);color:var(--ground)}
+@media (max-width:600px){.links .btn{display:none}}
+html[lang="ta"] h1,html[lang="ta"] h2,html[lang="ta"] h3{letter-spacing:0;line-height:1.3}
+html[lang="ta"] .hero h1{font-size:clamp(34px,4.8vw,62px);line-height:1.22}
+html[lang="ta"] h2{font-size:clamp(26px,3.4vw,40px)}
+html[lang="ta"] h3{font-size:19px}
+html[lang="ta"] .prob .q{font-size:19px;line-height:1.45}
+html[lang="ta"] .feat h3{font-size:26px}
+html[lang="ta"] .big h3{font-size:21px}
+html[lang="ta"] body{line-height:1.7}
+@media (max-width:1240px){html[lang="ta"] .links a:not(.btn){display:none}}
+
+/* header */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ground)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--ground) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none}
-.mark{width:40px;height:40px;border-radius:11px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:600;font-size:16px}
-.brand b{font-size:20px;letter-spacing:-0.01em;display:block;line-height:1.1}
+.mark{width:40px;height:40px;border-radius:11px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:700 15px ui-monospace,monospace}
+.brand b{font-size:20px;display:block;line-height:1.1}
 .brand small{color:var(--muted);font-size:13px}
-.links{display:flex;gap:28px;align-items:center}
-.links a{color:var(--text);text-decoration:none;font-size:16px}
-.links a:hover{color:var(--accent-text)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid transparent;cursor:pointer}
-.btn-primary{background:var(--accent);color:var(--on-accent)}
-.btn-primary:hover{filter:brightness(1.06)}
-.btn-ghost{border-color:var(--line);color:var(--text)}
-.btn-ghost:hover{border-color:var(--text)}
-@media (max-width:900px){.links .hide-sm{display:none}}
+.links{display:flex;gap:26px;align-items:center}
+.links a:not(.btn){color:var(--text);text-decoration:none;font-size:16px}
+.links a:not(.btn):hover{color:var(--accent-text)}
+.links .btn{min-height:46px;font-size:16px;padding:0 20px}
+@media (max-width:960px){.links a:not(.btn){display:none}}
 
 /* hero */
-.hero{padding:88px 0 72px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr);gap:56px;align-items:end}
-.hero h1{font-size:clamp(46px,7vw,92px);font-weight:700;letter-spacing:-0.04em;line-height:0.98;max-width:12ch}
-.hero .lede{margin-top:26px;font-size:20px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.term{background:#111934;color:#F4F6FB;border:1px solid #26335E;border-radius:18px;overflow:hidden;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:15px}
-.term-top{display:flex;gap:8px;align-items:center;padding:14px 16px;border-bottom:1px solid #26335E}
-.term-top i{width:11px;height:11px;border-radius:50%;display:block}
-.term-top span{margin-left:8px;color:#8D99BA;font-size:13px}
-.term-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:9px}
-.term-body .ok{color:#C8F560}
-.term-body .dim{color:#8D99BA}
-.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;margin-top:72px}
-.proof div{background:var(--surface);padding:22px 24px;display:flex;flex-direction:column;gap:4px}
-.proof b{font-size:18px;line-height:1.25}
-.proof span{color:var(--muted);font-size:15px}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.proof{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.proof{grid-template-columns:1fr}}
+.hero{padding:72px 0 88px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,6.4vw,84px);font-weight:700;letter-spacing:-0.045em;line-height:0.98}
+.hero .lede{margin-top:24px;font-size:20px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.assure{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;color:var(--muted);font-size:16px}
+.assure span{display:inline-flex;gap:8px;align-items:center}
+.assure svg{color:var(--accent-text);width:18px;height:18px;flex-basis:18px}
+.stage{position:relative;min-height:470px}
+.dash{position:absolute;inset:0 70px 40px 0;background:#FFFFFF;color:#0B1324;border:1px solid #D5DBE8;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 60px -30px rgba(11,19,36,.35)}
+.dash-top{display:flex;justify-content:space-between;align-items:center}
+.dash-top b{font-size:17px}
+.pill{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;background:#EEF9D6;color:#3D6200}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tile{background:#F4F6FA;border-radius:14px;padding:14px}
+.tile small{display:block;color:#56617A;font-size:13px}
+.tile b{font-size:24px;letter-spacing:-0.02em}
+.bars{display:flex;align-items:flex-end;gap:8px;height:92px;padding:0 4px;border-bottom:1px solid #E1E6F0}
+.bars i{flex:1;background:#DDE3EE;border-radius:6px 6px 0 0;display:block}
+.bars i.on{background:#C8F560}
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:10px 12px;border-radius:10px;background:#F4F6FA}
+.row em{font-style:normal;font-weight:600;color:#9A3B00}
+.phone{position:absolute;right:0;bottom:0;width:210px;height:400px;background:#0B1324;border-radius:34px;padding:10px;box-shadow:0 30px 60px -20px rgba(11,19,36,.5)}
+.phone-in{background:#F4F6FA;color:#0B1324;border-radius:26px;height:100%;overflow:hidden;display:flex;flex-direction:column}
+.chat-h{background:#0B1324;color:#F4F6FB;padding:14px 14px 12px;font-size:13px;display:flex;gap:8px;align-items:center}
+.chat-h i{width:26px;height:26px;border-radius:50%;background:#C8F560;display:block}
+.chat-b{padding:12px 10px;display:flex;flex-direction:column;gap:8px;font-size:12.5px;line-height:1.35}
+.msg{max-width:85%;padding:8px 10px;border-radius:12px}
+.msg.me{align-self:flex-end;background:#DFF6B0}
+.msg.bot{background:#FFFFFF;border:1px solid #E1E6F0}
+.ex{position:absolute;left:0;bottom:6px;font-size:13px;color:var(--muted)}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr}.stage{min-height:440px;max-width:620px}}
+@media (max-width:560px){.stage{min-height:auto;display:flex;flex-direction:column;gap:16px}.dash,.phone{position:relative;inset:auto}.phone{align-self:center}.ex{position:static}.tiles b{font-size:19px}}
 
-/* services */
-.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 28px;display:flex;flex-direction:column;gap:14px}
-.svc.feature{grid-row:span 2;background:var(--accent);color:var(--on-accent);border-color:transparent}
-.svc.feature p,.svc.feature li{color:#1D2A0A}
-.svc svg{width:38px;height:38px;stroke:var(--accent-text)}
-.svc.feature svg{stroke:var(--on-accent)}
-.svc p{color:var(--muted);font-size:17px}
-.svc ul{margin:4px 0 0;padding-left:20px;color:var(--muted);font-size:16px;display:flex;flex-direction:column;gap:6px}
-@media (max-width:900px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.svc.feature{grid-row:auto;grid-column:1/-1}}
-@media (max-width:600px){.services{grid-template-columns:1fr}}
+/* problems */
+.probs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.prob{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 26px;display:flex;flex-direction:column;gap:18px}
+.prob .q{font-size:22px;font-weight:600;line-height:1.25;letter-spacing:-0.01em}
+.prob .a{display:flex;gap:12px;color:var(--muted);font-size:17px;padding-top:16px;border-top:1px dashed var(--line)}
+.prob .a svg{color:var(--accent-text);margin-top:2px}
+.prob .a b{color:var(--text);font-weight:600}
+@media (max-width:960px){.probs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.probs{grid-template-columns:1fr}}
 
-/* industries */
-.alt{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.ind{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0;border-top:1px solid var(--line)}
-.ind article{padding:26px 24px 28px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
-.ind h3{font-size:20px}
-.ind p{color:var(--muted);font-size:16px}
-.ind .yours h3{color:var(--accent-text)}
+/* benefits */
+.big4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.big{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:14px}
+.big .ic{width:56px;height:56px;border-radius:16px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center}
+.big .ic svg{width:28px;height:28px;flex-basis:28px}
+.big h3{font-size:24px}
+.big p{color:var(--muted);font-size:17px}
+.big ul{list-style:none;margin:4px 0 0;padding:14px 0 0;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:8px;font-size:16px}
+.big li{display:flex;gap:10px}
+.big li svg{color:var(--accent-text);width:18px;height:18px;flex-basis:18px;margin-top:4px}
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 36px;margin-top:56px}
+.more div{display:flex;gap:14px}
+.more svg{color:var(--accent-text);margin-top:3px}
+.more h3{font-size:19px;margin-bottom:6px}
+.more p{color:var(--muted);font-size:16px}
+@media (max-width:1060px){.big4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.big4,.more{grid-template-columns:1fr}}
+.compare{margin-top:72px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--surface)}
+.compare-scroll{overflow-x:auto}
+.compare table{width:100%;border-collapse:collapse;min-width:620px;font-size:17px}
+.compare th,.compare td{text-align:left;padding:16px 22px;border-bottom:1px solid var(--line);vertical-align:top}
+.compare tr:last-child td{border-bottom:0}
+.compare thead th{font-size:15px;color:var(--muted);font-weight:600;background:var(--surface-2)}
+.compare thead th:last-child{background:var(--accent);color:var(--on-accent)}
+.compare td:first-child{font-weight:600;width:22%}
+.compare td:nth-child(2){color:var(--muted);width:36%}
+.compare td:last-child{font-weight:500}
 
-/* why */
-.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 36px}
-.why div{display:flex;flex-direction:column;gap:8px}
-.why h3{display:flex;gap:12px;align-items:center}
-.why h3 svg{flex:0 0 22px;stroke:var(--accent-text)}
-.why p{color:var(--muted);font-size:17px;padding-left:34px}
-@media (max-width:900px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.why{grid-template-columns:1fr}}
+/* explorer */
+.dark{background:var(--ink);color:var(--ink-text)}
+.dark .lede{color:var(--ink-muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.tab{min-height:46px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ink-line);background:transparent;color:var(--ink-text);font:500 16px 'Space Grotesk','Noto Sans Tamil',system-ui,sans-serif;cursor:pointer}
+.tab:hover{border-color:var(--ink-muted)}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#0B1324;font-weight:600}
+.explore{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:44px;align-items:start}
+.explore .dash{position:relative;inset:auto;box-shadow:none;border-color:#27345C}
+.feat h3{font-size:30px;letter-spacing:-0.02em}
+.feat p.sub{color:var(--ink-muted);margin-top:12px}
+.feat ul{list-style:none;margin:24px 0 30px;padding:0;display:flex;flex-direction:column;gap:12px}
+.feat li{display:flex;gap:12px;font-size:18px}
+.feat li svg{color:var(--accent);margin-top:3px}
+@media (max-width:900px){.explore{grid-template-columns:1fr}}
 
-/* process */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;counter-reset:s}
-.steps li{counter-increment:s;border-top:3px solid var(--text);padding-top:18px;display:flex;flex-direction:column;gap:8px}
-.steps li::before{content:counter(s);font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:600;color:var(--accent-text);font-size:15px}
-.steps li:last-child{border-color:var(--accent)}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:14px}
+.plan.pop{border:2px solid var(--text)}
+.plan .tag{align-self:flex-start;font-size:14px;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--accent);color:var(--on-accent)}
+.plan h3{font-size:26px}
+.plan .for{color:var(--muted)}
+.plan ul{list-style:none;padding:0;margin:8px 0 18px;display:flex;flex-direction:column;gap:10px;font-size:17px}
+.plan li{display:flex;gap:10px}
+.plan li svg{color:var(--accent-text);width:20px;height:20px;flex-basis:20px;margin-top:3px}
+.plan .btn{margin-top:auto}
+.plans-note{margin-top:24px;color:var(--muted);font-size:16px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+
+/* planner */
+.planner{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px}
+.progress{height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;margin-bottom:26px}
+.progress i{display:block;height:100%;background:var(--accent-text);border-radius:99px;transition:width .3s}
+.stepq{display:none;border:0;margin:0;padding:0;min-width:0}
+.stepq.on{display:block}
+.stepq legend{font-size:24px;font-weight:600;letter-spacing:-0.015em;padding:0;margin-bottom:6px}
+.stepq .hint{color:var(--muted);font-size:16px;margin-bottom:20px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt span{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border:1.5px solid var(--line);border-radius:999px;cursor:pointer;font-size:16px;user-select:none}
+.opt span:hover{border-color:var(--text)}
+.opt input:checked + span{background:var(--text);color:var(--ground);border-color:var(--text)}
+.opt input:focus-visible + span{outline:3px solid #7FB800;outline-offset:3px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fields .full{grid-column:1/-1}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600}
+label.f input,label.f textarea{font:400 17px 'Space Grotesk','Noto Sans Tamil',system-ui,sans-serif;color:var(--text);background:var(--ground);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px}
+label.f textarea{min-height:110px;resize:vertical}
+label.f input:focus,label.f textarea:focus{outline:none;border-color:var(--accent-text)}
+@media (max-width:560px){.fields{grid-template-columns:1fr}.card{padding:24px 20px}}
+.nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.err{color:#B42318;font-size:15px;margin-top:12px;min-height:1em}
+.summary{background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:18px;white-space:pre-wrap;font-size:15px;line-height:1.6;max-height:300px;overflow:auto}
+.send{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.why-plan{display:flex;flex-direction:column;gap:18px;margin-top:28px}
+.why-plan div{display:flex;gap:12px;color:var(--muted)}
+.why-plan svg{color:var(--accent-text);margin-top:2px}
+@media (max-width:900px){.planner{grid-template-columns:1fr}}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:10px}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--surface);border:1.5px solid var(--line)}
+.steps li:last-child::before{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .steps p{color:var(--muted);font-size:16px}
 @media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
 
-/* experience */
-.timeline{display:flex;flex-direction:column}
-.role{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;padding:32px 0;border-top:1px solid var(--line)}
-.role:last-child{border-bottom:1px solid var(--line)}
-.role .when{color:var(--muted);font-size:16px;display:flex;flex-direction:column;gap:4px}
-.role .when b{color:var(--text);font-size:18px}
-.role ul{margin:12px 0 0;padding-left:20px;color:var(--muted);display:flex;flex-direction:column;gap:6px;font-size:17px}
-@media (max-width:760px){.role{grid-template-columns:1fr;gap:6px}}
-
-/* projects */
-.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 28px;display:flex;flex-direction:column;gap:12px}
-.proj p{color:var(--muted);font-size:17px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
-.tags span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--muted)}
-@media (max-width:760px){.projects{grid-template-columns:1fr}}
-
-/* stack */
-.stack{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0}
-.stack dt,.stack dd{margin:0;padding:16px 0;border-top:1px solid var(--line)}
-.stack dt{font-weight:600}
-.stack dd{color:var(--muted)}
-@media (max-width:640px){.stack{grid-template-columns:1fr}.stack dd{border-top:0;padding-top:0}}
-.certs{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.certs span{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:600;font-size:16px}
-.certs svg{stroke:var(--accent-text)}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.me{display:flex;gap:18px;align-items:center;margin-bottom:22px}
+.avatar{width:72px;height:72px;border-radius:20px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-size:26px;font-weight:700}
+.me b{font-size:22px;display:block}
+.me span{color:var(--muted)}
+.creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}
+.creds div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.creds b{display:block;font-size:17px;line-height:1.25}
+.creds span{color:var(--muted);font-size:14px}
+.work{display:flex;flex-direction:column;gap:14px}
+.work article{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.work p{color:var(--muted);font-size:16px;margin-top:8px}
+details.exp{margin-top:6px;border-top:1px solid var(--line);padding-top:6px}
+details.exp summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none;display:flex;justify-content:space-between}
+details.exp summary::-webkit-details-marker{display:none}
+details.exp summary::after{content:"+";color:var(--accent-text);font-size:24px;line-height:1}
+details.exp[open] summary::after{content:"−"}
+.role{padding:14px 0;border-top:1px solid var(--line);font-size:16px}
+.role b{display:block}
+.role span{color:var(--muted)}
+.role p{color:var(--muted);margin-top:6px}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+@media (max-width:480px){.creds{grid-template-columns:1fr}}
 
 /* faq */
-.faq{max-width:820px}
+.faq{max-width:840px}
 .faq details{border-top:1px solid var(--line)}
 .faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-weight:600;font-size:19px;position:relative}
+.faq summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;font-weight:600;font-size:19px;position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:4px;top:18px;font-size:26px;color:var(--accent-text);transition:transform .2s}
+.faq summary::after{content:"+";position:absolute;right:4px;top:17px;font-size:28px;color:var(--accent-text);transition:transform .2s}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{color:var(--muted);padding:0 0 24px;max-width:66ch}
 
-/* contact */
-.contact{background:var(--accent);color:var(--on-accent);border-radius:28px;padding:56px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:40px;align-items:center}
-.contact h2{max-width:14ch}
-.contact p{margin-top:16px;font-size:19px;color:#1D2A0A;max-width:46ch}
-.contact-list{display:flex;flex-direction:column;gap:12px}
-.contact-list a{display:flex;align-items:center;gap:14px;min-height:56px;padding:0 20px;border-radius:16px;background:#0A0F1F;color:#F4F6FB;text-decoration:none;font-weight:600;font-size:17px;word-break:break-all}
-.contact-list a:hover{background:#18213F}
-.contact-list svg{flex:0 0 22px;stroke:#C8F560}
-@media (max-width:860px){.contact{grid-template-columns:1fr;padding:36px 26px}}
-
-footer{padding:40px 0 48px;color:var(--muted);font-size:15px}
+/* final */
+.final{background:var(--accent);color:var(--on-accent);border-radius:30px;padding:60px 56px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:40px;align-items:center}
+.final h2{max-width:14ch}
+.final p{margin-top:16px;font-size:19px;color:#1D2A0A}
+.clist{display:flex;flex-direction:column;gap:12px}
+.clist a{display:flex;align-items:center;gap:14px;min-height:58px;padding:0 20px;border-radius:16px;background:#0B1324;color:#F4F6FB;text-decoration:none;font-weight:600;font-size:17px;overflow-wrap:anywhere}
+.clist a:hover{background:#1A2442}
+.clist svg{color:#C8F560}
+@media (max-width:860px){.final{grid-template-columns:1fr;padding:38px 26px}}
+footer{padding:40px 0 100px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
+/* floating whatsapp */
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 22px 0 18px;border-radius:999px;background:#0B1324;color:#F4F6FB;text-decoration:none;font-weight:600;box-shadow:0 14px 30px -10px rgba(11,19,36,.55);border:1px solid #27345C}
+.wa svg{color:#C8F560}
+@media (max-width:520px){.wa span{display:none}.wa{padding:0 16px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
@@ -178,16 +284,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="NexaForge AI home">
+    <a class="brand" href="#top" aria-label="Trueforge AI home">
       <span class="mark" aria-hidden="true">&lt;/&gt;</span>
-      <span><b>NexaForge AI</b><small>by Prabu S</small></span>
+      <span><b>Trueforge AI</b><small><span data-ta="பிரபு S">by Prabu S</span></small></span>
     </a>
     <nav class="links" aria-label="Main">
-      <a class="hide-sm" href="#services">Services</a>
-      <a class="hide-sm" href="#industries">Industries</a>
-      <a class="hide-sm" href="#experience">Experience</a>
-      <a class="hide-sm" href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#contact">Get a free quote</a>
+      <a href="#benefits"><span data-ta="பலன்கள்">Benefits</span></a>
+      <a href="#examples"><span data-ta="மாதிரிகள்">See examples</span></a>
+      <a href="#plans"><span data-ta="திட்டங்கள்">Plans</span></a>
+      <a href="#about"><span data-ta="என்னைப் பற்றி">About me</span></a>
+      <a href="#faq"><span data-ta="கேள்விகள்">FAQ</span></a>
+      <div class="lang" role="group" aria-label="Language / மொழி"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="ta" aria-pressed="false" lang="ta">தமிழ்</button></div>
+      <a class="btn btn-accent" href="#plan"><span data-ta="இலவச விலை மதிப்பீடு">Get a free quote</span></a>
     </nav>
   </div>
 </header>
@@ -195,272 +303,369 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <main id="top">
 
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <h1>Software built around your business.</h1>
-        <p class="lede">I’m Prabu S. Through NexaForge AI I build web apps, mobile apps, cloud systems and AI agents for businesses of every size — the same engineering I’ve delivered to enterprise clients for six years, at a fixed price a growing business can plan for.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://wa.me/918825851811?text=Hi%20Prabu%2C%20I%27d%20like%20to%20discuss%20an%20app%20for%20my%20business." target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
-            Chat on WhatsApp
-          </a>
-          <a class="btn btn-ghost" href="mailto:prabusampath007@gmail.com?subject=Project%20enquiry">Email your idea</a>
-        </div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1><span data-ta="உங்கள் வணிகத்துக்கென்றே ஒரு App.">Run your business on an app made for you.</span></h1>
+      <p class="lede"><span data-ta="அதிக விற்பனை, புதிய வாடிக்கையாளர்கள், தினமும் கையால் செய்யும் வேலையிலிருந்து விடுதலை. பில்லிங், ஸ்டாக், புக்கிங், ஆர்டர்கள், வாடிக்கையாளர் உரையாடல் ஆகியவற்றைத் தானியக்கமாக்கும் Web App, Mobile App, AI உதவியாளர்களை நான் உருவாக்குகிறேன் — வேலை தொடங்கும் முன்பே ஒப்புக்கொள்ளும் நிலையான விலையில்.">Sell more, win new customers and stop doing the same work by hand every day. I build web apps, mobile apps and AI assistants that automate billing, stock, bookings, orders and customer chat — at a fixed price you agree before any work starts.</span></p>
+      <div class="cta">
+        <a class="btn btn-accent" href="#plan"><span data-ta="2 நிமிடத்தில் உங்கள் App-ஐத் திட்டமிடுங்கள்">Plan my app in 2 minutes</span></a>
+        <a class="btn btn-line" href="https://wa.me/918825851811?text=Hi%20Prabu%2C%20I%27d%20like%20to%20discuss%20an%20app%20for%20my%20business." target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span data-ta="WhatsApp-இல் பேசுங்கள்">WhatsApp me</span></a>
       </div>
-      <div class="term" aria-label="Example project run">
-        <div class="term-top"><i style="background:#FF6B5E"></i><i style="background:#FFC23D"></i><i style="background:#3DDC84"></i><span>your-project.sh</span></div>
-        <div class="term-body">
-          <div class="dim">$ build --for your-business</div>
-          <div><span class="ok">✓</span> requirement analysis</div>
-          <div><span class="ok">✓</span> UI/UX design</div>
-          <div><span class="ok">✓</span> web + mobile apps</div>
-          <div><span class="ok">✓</span> cloud deployment</div>
-          <div><span class="ok">✓</span> AI agent integration</div>
-          <div class="ok" style="font-weight:600">→ ready to launch_</div>
-        </div>
+      <div class="assure">
+        <span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="அதிக விற்பனை">More sales</span></span>
+        <span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="குறைந்த கைவேலை">Less manual work</span></span>
+        <span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="முதல் ஆலோசனை இலவசம்">Free first conversation</span></span>
+        <span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="நிலையான விலை, மறைமுகக் கட்டணம் இல்லை">Fixed price, no surprises</span></span>
+        <span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="App, Code முழுவதும் உங்களுக்கே சொந்தம்">You own the app and code</span></span>
       </div>
     </div>
 
-    <div class="proof">
-      <div><b>6 years</b><span>enterprise software delivery</span></div>
-      <div><b>AWS Solutions Architect</b><span>Professional certification</span></div>
-      <div><b>Terraform Associate</b><span>HashiCorp certification</span></div>
-      <div><b>Healthcare to finance</b><span>real systems, real users</span></div>
+    <div class="stage" aria-label="Example of a pharmacy billing dashboard and an AI WhatsApp assistant">
+      <div class="dash">
+        <div class="dash-top"><b><span data-ta="உங்கள் மருந்தகம் · இன்று">Your Pharmacy · Today</span></b><span class="pill">Live</span></div>
+        <div class="tiles">
+          <div class="tile"><small><span data-ta="விற்பனை">Sales</span></small><b>₹48,200</b></div>
+          <div class="tile"><small><span data-ta="பில்கள்">Bills</span></small><b>136</b></div>
+          <div class="tile"><small><span data-ta="குறைந்த ஸ்டாக்">Low stock</span></small><b>9</b></div>
+        </div>
+        <div class="bars" aria-hidden="true"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:85%"></i><i class="on" style="height:96%"></i></div>
+        <div class="rows">
+          <div class="row"><span><span data-ta="Paracetamol 500mg · 12 மீதம்">Paracetamol 500mg · 12 left</span></span><em><span data-ta="மறு ஆர்டர்">Reorder</span></em></div>
+          <div class="row"><span>Amoxicillin 250mg</span><em><span data-ta="30 நவ. காலாவதி">Expires 30 Nov</span></em></div>
+        </div>
+      </div>
+      <div class="phone">
+        <div class="phone-in">
+          <div class="chat-h"><i></i><span><span data-ta="உங்கள் மருந்தகம் · AI உதவியாளர்">Your Pharmacy · AI assistant</span></span></div>
+          <div class="chat-b">
+            <div class="msg me"><span data-ta="Paracetamol 650 ஸ்டாக் இருக்கா?">Do you have Paracetamol 650 in stock?</span></div>
+            <div class="msg bot"><span data-ta="ஆம், 40 ஸ்ட்ரிப் இருக்கு. 2 ஸ்ட்ரிப் எடுத்து வைக்கட்டுமா?">Yes, 40 strips available. Shall I keep 2 strips ready for pickup?</span></div>
+            <div class="msg me"><span data-ta="சரி, மாலை 6 மணிக்குள்">Yes please, by 6 pm</span></div>
+            <div class="msg bot"><span data-ta="முடிந்தது. ஆர்டர் #2081 மாலை 6 மணிக்குள் தயார். UPI அல்லது கவுண்டரில் பணம் செலுத்தலாம்.">Done. Order #2081 will be ready by 6 pm. Pay by UPI or at the counter.</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="ex"><span data-ta="மாதிரி திரைகள்">Example screens</span></p>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section class="alt" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="section-head">
-      <h2>What I build for you</h2>
-      <p class="lede">One engineer for the whole job — design, front end, back end, database, cloud and launch — so you brief one person and get one working product.</p>
+    <div class="head">
+      <h2><span data-ta="இது உங்கள் தொழிலைப் போல இருக்கிறதா?">Does this sound like your business?</span></h2>
+      <p class="lede"><span data-ta="என் வாடிக்கையாளர்களில் பலர் தொழில்நுட்ப யோசனையுடன் வருவதில்லை. தினமும் அவர்களின் நேரத்தை வீணாக்கும் ஒரு பிரச்சினையுடன்தான் வருகிறார்கள்.">Most of my clients don’t start with a tech idea. They start with a problem that eats their time every day.</span></p>
     </div>
-    <div class="services">
-      <article class="svc feature">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3z"></path><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z"></path></svg>
-        <h3>GenAI and AI agents</h3>
-        <p>Put AI to work on the tasks that slow your team down.</p>
+    <div class="probs">
+      <div class="prob"><p class="q"><span data-ta="“ஸ்டாக் நோட்டுப் புத்தகத்தில் இருக்கிறது, தீர்ந்துபோவதே தெரியவில்லை.”">“Stock is in a notebook and we run out without noticing.”</span></p><p class="a"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-ta="உங்கள் போனில் குறைந்த ஸ்டாக், காலாவதி எச்சரிக்கைகளுடன் &lt;b&gt;நேரடி ஸ்டாக் App&lt;/b&gt;."><b>Live stock app</b> with low-stock and expiry alerts on your phone.</span></p></div>
+      <div class="prob"><p class="q"><span data-ta="“பில் போட நேரம் அதிகம், வரிசை நீண்டுகொண்டே போகிறது.”">“Billing takes too long and the queue keeps growing.”</span></p><p class="a"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-ta="பார்கோடு ஸ்கேன், UPI பேமெண்ட்டுடன் &lt;b&gt;வேகமான GST பில்லிங்&lt;/b&gt;."><b>Fast GST billing</b> with barcode scanning and UPI payments.</span></p></div>
+      <div class="prob"><p class="q"><span data-ta="“போனை யாரும் எடுக்காதபோது புக்கிங்குகள் தவறிவிடுகின்றன.”">“We miss bookings when nobody picks up the phone.”</span></p><p class="a"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-ta="தானியங்கி WhatsApp நினைவூட்டல்களுடன் &lt;b&gt;24/7 ஆன்லைன் புக்கிங்&lt;/b&gt;."><b>24/7 online booking</b> with automatic WhatsApp reminders.</span></p></div>
+      <div class="prob"><p class="q"><span data-ta="“வாடிக்கையாளர்கள் நாள் முழுக்க ஒரே கேள்விகளைக் கேட்கிறார்கள்.”">“Customers ask the same questions all day.”</span></p><p class="a"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-ta="WhatsApp அல்லது உங்கள் Website-இல் இரவும் பகலும் பதில் சொல்லும் &lt;b&gt;AI உதவியாளர்&lt;/b&gt;."><b>AI assistant</b> that answers on WhatsApp or your website, day and night.</span></p></div>
+      <div class="prob"><p class="q"><span data-ta="“வாடிக்கையாளர்களால் எங்களை ஆன்லைனில் கண்டுபிடிக்கவோ ஆர்டர் செய்யவோ முடியவில்லை.”">“Customers can’t find us or order from us online.”</span></p><p class="a"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-ta="பேமெண்ட், டெலிவரி டிராக்கிங்குடன் &lt;b&gt;Website, ஆன்லைன் ஸ்டோர் அல்லது App&lt;/b&gt;."><b>Website, online store or app</b> with payments and delivery tracking.</span></p></div>
+      <div class="prob"><p class="q"><span data-ta="“மாத இறுதியில்தான் வியாபாரம் எப்படி போனது என்று தெரிகிறது.”">“I only know how business went at month-end.”</span></p><p class="a"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-ta="இன்றைய விற்பனை, நிலுவை, ஸ்டாக்கை உங்கள் போனிலேயே காட்டும் &lt;b&gt;உரிமையாளர் Dashboard&lt;/b&gt;."><b>Owner dashboard</b> showing today’s sales, dues and stock on your phone.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="wrap">
+    <div class="head">
+      <h2><span data-ta="சரியான Software உங்கள் தொழிலுக்கு என்ன செய்யும்">What the right software does for your business</span></h2>
+      <p class="lede"><span data-ta="விற்பனையைக் கொண்டுவந்து, தினமும் பல மணி நேரத்தைச் சேமித்து, பின்னணியில் உங்களுக்காக வேலை செய்யும் App ஒரு செலவு அல்ல — அது ஒரு முதலீடு.">An app isn’t an expense when it brings in sales, saves hours every day and runs work for you in the background.</span></p>
+    </div>
+
+    <div class="big4">
+      <article class="big">
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3><span data-ta="விற்பனையை அதிகரியுங்கள்">Increase your sales</span></h3>
+        <p><span data-ta="கடை மூடியிருந்தாலும் விற்பனை செய்யுங்கள், வாடிக்கையாளர்கள் மீண்டும் வாங்க அதிக காரணங்களைக் கொடுங்கள்.">Sell even when your shop is closed and give customers more reasons to buy again.</span></p>
         <ul>
-          <li>Chatbots that answer from your own documents</li>
-          <li>WhatsApp and website assistants for customers</li>
-          <li>AI agents that automate repetitive workflows</li>
-          <li>Summaries, smart search and speech-to-text</li>
-          <li>Adding AI features to apps you already have</li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="24/7 ஆர்டர்களும் புக்கிங்குகளும்">Orders and bookings 24/7</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="ஆஃபர்கள், கூப்பன்கள், லாயல்டி பாயிண்ட்கள்">Offers, coupons and loyalty points</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="வாடிக்கையாளர்களைத் திரும்ப அழைத்து வரும் நினைவூட்டல்கள்">Reminders that bring customers back</span></li>
         </ul>
       </article>
-      <article class="svc">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="15" rx="2"></rect><path d="M2 8h20"></path><path d="M9 13l-2 2 2 2"></path><path d="M15 13l2 2-2 2"></path></svg>
-        <h3>Web applications</h3>
-        <p>Customer portals, admin dashboards, SaaS products and business websites, built with React or Angular on .NET or Node.js.</p>
+      <article class="big">
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M19 8v6M16 11h6"/></svg></div>
+        <h3><span data-ta="அதிக வாடிக்கையாளர்களைப் பெறுங்கள்">Bring in more customers</span></h3>
+        <p><span data-ta="ஆன்லைனில் உங்களைக் கண்டுபிடிக்க வைத்து, புதிய வாடிக்கையாளர்கள் எளிதாக அணுகும்படி செய்யுங்கள்.">Get found online and make it easy for new customers to reach you.</span></p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="Google, Maps-இல் தெரியுங்கள்">Show up on Google and Maps</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="உங்கள் பகுதிக்கு அப்பாலும் வாடிக்கையாளர்களை அடையுங்கள்">Reach customers beyond your area</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="இனி எந்த விசாரணையும் தவறாது">Never miss an enquiry again</span></li>
+        </ul>
       </article>
-      <article class="svc">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M10.5 18.5h3"></path></svg>
-        <h3>Mobile applications</h3>
-        <p>Android and iOS apps for your customers or staff, connected to the same secure back end as your web app.</p>
+      <article class="big">
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3><span data-ta="கைவேலையைக் குறையுங்கள்">Cut manual work</span></h3>
+        <p><span data-ta="ஒரே தகவலைத் தினமும் எழுதுவது, நகலெடுப்பது, மீண்டும் சரிபார்ப்பது — இனி வேண்டாம்.">Stop writing, copying and re-checking the same information every day.</span></p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="இனி நோட்டுப் புத்தகம், பதிவேடு தேவையில்லை">No more notebooks and registers</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="சில நொடிகளில் பில்கள், இன்வாய்ஸ்கள்">Bills and invoices in seconds</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="ஒவ்வொரு விற்பனையிலும் ஸ்டாக் தானாகப் புதுப்பிக்கப்படும்">Stock updates itself with every sale</span></li>
+        </ul>
       </article>
-      <article class="svc">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5H7z"></path><path d="M12 11v5"></path><path d="M9.5 13.5L12 11l2.5 2.5"></path></svg>
-        <h3>Cloud solutions</h3>
-        <p>Hosting and migration on AWS, Azure or Google Cloud, set up as code so it scales with you and stays affordable.</p>
+      <article class="big">
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z"/></svg></div>
+        <h3><span data-ta="AI மூலம் தானியக்கம்">Automate with AI</span></h3>
+        <p><span data-ta="வழக்கமான வேலைகளை Software-உம் AI Agent-களும் பார்த்துக்கொள்ளட்டும்; நீங்கள் வாடிக்கையாளர்களில் கவனம் செலுத்துங்கள்.">Let software and AI agents handle routine work while you focus on customers.</span></p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="AI உடனுக்குடன் வாடிக்கையாளர்களுக்குப் பதில் அளிக்கும்">AI replies to customers instantly</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="தானியங்கி பேமெண்ட், ஃபாலோ-அப் நினைவூட்டல்கள்">Automatic payment and follow-up reminders</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="கேட்காமலேயே மறு ஆர்டர்களும் ரிப்போர்ட்களும்">Reorders and reports without asking</span></li>
+        </ul>
       </article>
-      <article class="svc">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"></path><path d="M3 21v-5h5"></path></svg>
-        <h3>Upgrading old software</h3>
-        <p>Your current system is slow, fragile or stuck on old servers? I rebuild it in stages while your business keeps running.</p>
-      </article>
+    </div>
+
+    <div class="more">
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg><div><h3><span data-ta="குறைவான தவறுகள், இழப்புகள்">Fewer mistakes and losses</span></h3><p><span data-ta="துல்லியமான பில்கள், சரியான ஸ்டாக், காலாவதி எச்சரிக்கைகள் பணம் வீணாவதைத் தடுக்கும்.">Accurate bills, correct stock and expiry alerts stop money leaking away.</span></p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><div><h3><span data-ta="எப்போதும் உங்கள் கணக்குகள் தெரியும்">Know your numbers anytime</span></h3><p><span data-ta="விற்பனை, நிலுவை, ஸ்டாக், ஊழியர் செயல்பாடு — மாத இறுதியில் அல்ல, உடனுக்குடன் உங்கள் போனில்.">Sales, dues, stock and staff performance live on your phone, not at month-end.</span></p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><div><h3><span data-ta="மகிழ்ச்சியான வாடிக்கையாளர்கள்">Happier customers</span></h3><p><span data-ta="வேகமான சேவை, உடனடி பதில்கள், டிஜிட்டல் ரசீதுகள், குறைந்த காத்திருப்பு.">Faster service, instant replies, digital receipts and less waiting in line.</span></p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4.5 4.5 0 0 1 6-4.2"/></svg><div><h3><span data-ta="உங்கள் குழுவிடமிருந்து அதிக பலன்">Get more from your team</span></h3><p><span data-ta="ஊழியர்கள் காகித வேலைக்குப் பதிலாக வாடிக்கையாளர்களுக்குச் சேவை செய்வார்கள்.">Staff spend time serving customers instead of doing paperwork.</span></p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><div><h3><span data-ta="எங்கிருந்தும் பல கிளைகளை நடத்துங்கள்">Run more branches from anywhere</span></h3><p><span data-ta="நீங்கள் எங்கிருந்தாலும் ஒவ்வொரு கடை, கிளை, கிடங்கையும் ஒரே App-இல் நிர்வகியுங்கள்.">Manage every shop, branch or warehouse from one app, wherever you are.</span></p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><h3><span data-ta="தொழில்முறைத் தோற்றம், முழுப் பாதுகாப்பு">Look professional, stay secure</span></h3><p><span data-ta="நம்பிக்கை தரும் நவீன பிராண்ட்; உங்கள் தரவு Cloud-இல் பாதுகாப்பாக பேக்கப் செய்யப்படும்.">A modern brand that builds trust, with your data backed up safely in the cloud.</span></p></div></div>
+      <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg><div><h3><span data-ta="வேகமாகப் பணம் வசூல்">Get paid faster</span></h3><p><span data-ta="UPI பேமெண்ட் லிங்க், தானியங்கி நிலுவை நினைவூட்டல்கள் — அலைச்சல் குறையும், பணப்புழக்கம் மேம்படும்.">UPI payment links and automatic due reminders mean less chasing and better cash flow.</span></p></div></div><div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3><span data-ta="தினமும் பல மணி நேரம் மிச்சம்">Hours back every day</span></h3><p><span data-ta="பதிவேடு, கணக்கு, அழைப்புகளில் செலவான நேரம் தொழிலை வளர்க்கப் பயன்படும்.">Time spent on registers, calculations and calls goes back into growing the business.</span></p></div></div><div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg><div><h3><span data-ta="கூடுதல் ஊழியர் இல்லாமல் வளர்ச்சி">Grow without extra staff</span></h3><p><span data-ta="வழக்கமான வேலைகள் தானாக நடப்பதால், அதே குழுவுடன் அதிக வாடிக்கையாளர்களையும் ஆர்டர்களையும் கையாளலாம்.">Handle more customers and orders with the same team, because routine work runs itself.</span></p></div></div>
+    </div>
+
+    <div class="compare">
+      <div class="compare-scroll">
+        <table>
+          <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Your business before and after the app</caption>
+          <thead><tr><th scope="col"><span data-ta="அன்றாட வேலை">Everyday task</span></th><th scope="col"><span data-ta="App இல்லாமல்">Without an app</span></th><th scope="col"><span data-ta="உங்கள் Trueforge App உடன்">With your Trueforge app</span></th></tr></thead>
+          <tbody>
+            <tr><td><span data-ta="பில்லிங்">Billing</span></td><td><span data-ta="கையால் எழுதும் பில்கள், நீண்ட வரிசைகள்">Handwritten bills, long queues</span></td><td><span data-ta="சில நொடிகளில் GST பில் — பிரிண்ட் அல்லது WhatsApp-இல்">GST bill printed or sent on WhatsApp in seconds</span></td></tr>
+            <tr><td><span data-ta="ஸ்டாக்">Stock</span></td><td><span data-ta="கையால் எண்ணுவது, தீர்ந்துபோவது தெரியாது">Counted by hand, items run out unnoticed</span></td><td><span data-ta="ஒவ்வொரு விற்பனையிலும் புதுப்பிப்பு, தீரும் முன்பே எச்சரிக்கை">Updates with every sale, alerts before you run out</span></td></tr>
+            <tr><td><span data-ta="புக்கிங்கும் ஆர்டர்களும்">Bookings and orders</span></td><td><span data-ta="யாராவது போன் எடுத்தால் மட்டுமே">Only when someone answers the phone</span></td><td><span data-ta="வாடிக்கையாளர்கள் 24/7 ஆன்லைனில் புக் செய்து பணம் செலுத்துவார்கள்">Customers book and pay online 24/7</span></td></tr>
+            <tr><td><span data-ta="வாடிக்கையாளர் கேள்விகள்">Customer questions</span></td><td><span data-ta="ஒரே பதிலை மீண்டும் மீண்டும் டைப் செய்வது">Same answers typed again and again</span></td><td><span data-ta="AI உதவியாளர் இரவும் பகலும் உடனே பதில் அளிக்கும்">AI assistant replies instantly, day and night</span></td></tr>
+            <tr><td><span data-ta="பேமெண்ட் ஃபாலோ-அப்">Payment follow-ups</span></td><td><span data-ta="நீங்களே நினைவில் வைத்து அழைக்க வேண்டும்">Calls and reminders you have to remember</span></td><td><span data-ta="WhatsApp, SMS-இல் தானியங்கி நினைவூட்டல்கள்">Automatic reminders on WhatsApp and SMS</span></td></tr>
+            <tr><td><span data-ta="வணிக ரிப்போர்ட்கள்">Business reports</span></td><td><span data-ta="மாத இறுதியில் கணக்கிடுவது — அதுவும் சில நேரம் மட்டுமே">Calculated at month-end, if at all</span></td><td><span data-ta="தினமும் உங்கள் போனில் நேரடி Dashboard">Live dashboard on your phone, every day</span></td></tr>
+            <tr><td><span data-ta="ஆஃபர்கள், மார்க்கெட்டிங்">Offers and marketing</span></td><td><span data-ta="அச்சிட்ட நோட்டீஸ், வாய்மொழி மட்டும்">Printed flyers and word of mouth</span></td><td><span data-ta="ஒரே கிளிக்கில் எல்லா வாடிக்கையாளர்களுக்கும் WhatsApp-இல் ஆஃபர்">Offers sent to all your customers on WhatsApp in one click</span></td></tr><tr><td><span data-ta="நிலுவை வசூல்">Collecting dues</span></td><td><span data-ta="நேரில் சென்று, திரும்பத் திரும்ப அழைப்பது">Visits and repeated phone calls</span></td><td><span data-ta="பணம் வரும் வரை தானியங்கி நினைவூட்டலுடன் பேமெண்ட் லிங்க்">Payment links with automatic reminders until paid</span></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="industries" class="alt">
+<section id="examples" class="dark">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Solutions for every industry</h2>
-      <p class="lede">A few of the applications I can build for you. If your business isn’t listed, tell me how it works — that’s where every project starts.</p>
+    <div class="head">
+      <h2><span data-ta="உங்கள் App எப்படி இருக்கும் என்று பாருங்கள்">See what your app could look like</span></h2>
+      <p class="lede"><span data-ta="உங்கள் தொழிலைத் தேர்ந்தெடுங்கள். ஒவ்வொரு App-உம் உங்கள் வணிகம் செயல்படும் விதத்துக்கு ஏற்ப உருவாக்கப்படுகிறது — இவை தொடக்கப் புள்ளிகள் மட்டுமே.">Pick your industry. Every app is built around how your business works — these are starting points, not templates.</span></p>
     </div>
-    <div class="ind">
-      <article><h3>Medical and clinics</h3><p>Appointment booking, patient records, e-prescriptions and teleconsultation.</p></article>
-      <article><h3>Pharmacy</h3><p>Stock and expiry tracking, GST billing, supplier orders and prescription records.</p></article>
-      <article><h3>E-commerce</h3><p>Online store, payments, order tracking and an admin dashboard to run it all.</p></article>
-      <article><h3>Education</h3><p>E-learning platforms, live classes, online exams and student and parent portals.</p></article>
-      <article><h3>Banking and finance</h3><p>Loan and account management, KYC workflows, reports and secure integrations.</p></article>
-      <article><h3>Textile</h3><p>Production and order tracking, lot-wise inventory and dealer management.</p></article>
-      <article><h3>Billing and invoicing</h3><p>GST invoices, payment tracking, customer ledgers and sales reports.</p></article>
-      <article><h3>Stock management</h3><p>Multi-location inventory, barcode scanning, low-stock alerts and purchase orders.</p></article>
-      <article><h3>Booking platforms</h3><p>Slots, calendars, online payments and automatic reminders for any service.</p></article>
-      <article><h3>Restaurants and retail</h3><p>POS, online ordering, loyalty programmes and daily sales dashboards.</p></article>
-      <article><h3>Logistics and field teams</h3><p>Delivery tracking, staff attendance and job assignment apps.</p></article>
-      <article class="yours"><h3>Your business</h3><p>Something custom? <a href="#contact">Describe it</a> and get a scope and fixed price.</p></article>
+    <div class="tabs" role="tablist" aria-label="Industries" id="tabs"></div>
+    <div class="explore" id="panel" role="tabpanel">
+      <div class="dash" aria-label="Example app screen">
+        <div class="dash-top"><b id="x-title"></b><span class="pill"><span data-ta="மாதிரி">Example</span></span></div>
+        <div class="tiles" id="x-tiles"></div>
+        <div class="bars" aria-hidden="true"><i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:66%"></i><i style="height:58%"></i><i style="height:80%"></i><i class="on" style="height:92%"></i></div>
+        <div class="rows" id="x-rows"></div>
+      </div>
+      <div class="feat">
+        <h3 id="x-name"></h3>
+        <p class="sub" id="x-sub"></p>
+        <ul id="x-feats"></ul>
+        <a class="btn btn-accent" id="x-cta" href="#plan"><span data-ta="இந்த App-ஐத் திட்டமிடுங்கள்">Plan this app</span></a>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <div class="head">
+      <h2><span data-ta="சிறிதாகத் தொடங்குங்கள், அல்லது முழுமையாகச் செல்லுங்கள்">Start small or go all in</span></h2>
+      <p class="lede"><span data-ta="ஒவ்வொரு திட்டத்துக்கும் இலவச ஆலோசனைக்குப் பிறகு தனி நிலையான விலை தரப்படும். ஒவ்வொரு நிலையிலும் பொதுவாக என்ன அடங்கும் என்பதை இவை காட்டுகின்றன.">Every project gets its own fixed quote after a free conversation. These plans show what each level usually includes.</span></p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3><span data-ta="ஆன்லைனுக்கு வாருங்கள்">Get online</span></h3>
+        <p class="for"><span data-ta="வாடிக்கையாளர்கள் கண்டுபிடித்துத் தொடர்புகொள்ள வேண்டிய தொழில்களுக்கு.">For businesses that need to be found and contacted.</span></p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="தொழில்முறை வணிக Website">Professional business website</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="WhatsApp, அழைப்பு, விசாரணை பட்டன்கள்">WhatsApp, call and enquiry buttons</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="Google Maps, தேடல் அமைப்பு">Google Maps and search setup</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="மொபைலில் சிறப்பாக இயங்கும்">Works perfectly on mobile</span></li>
+        </ul>
+        <a class="btn btn-line" href="#plan"><span data-ta="விலை கேளுங்கள்">Get a quote</span></a>
+      </article>
+      <article class="plan pop">
+        <span class="tag"><span data-ta="அதிகம் தேர்ந்தெடுக்கப்படுவது">Most chosen</span></span>
+        <h3><span data-ta="வணிக App">Business app</span></h3>
+        <p class="for"><span data-ta="தினசரி செயல்பாடுகளை ஒரே அமைப்பில் நடத்த.">For running daily operations from one system.</span></p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="பில்லிங், ஸ்டாக், புக்கிங் அல்லது ஆர்டர்கள்">Billing, stock, booking or orders</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="பொறுப்புகளுடன் ஊழியர் லாகின்">Staff logins with roles</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="உரிமையாளர் Dashboard, ரிப்போர்ட்கள்">Owner dashboard and reports</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="பாதுகாப்பான Cloud ஹோஸ்டிங், பேக்கப்">Secure cloud hosting and backups</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="கூடுதலாக Mobile App">Mobile app add-on</span></li>
+        </ul>
+        <a class="btn btn-dark" href="#plan"><span data-ta="விலை கேளுங்கள்">Get a quote</span></a>
+      </article>
+      <article class="plan">
+        <h3><span data-ta="AI மற்றும் தனிப்பயன்">AI and custom</span></h3>
+        <p class="for"><span data-ta="பெரிய யோசனைகள், தளங்கள், தானியக்கத்துக்கு.">For bigger ideas, platforms and automation.</span></p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="AI Chatbot-கள், Agent-கள்">AI chatbots and agents</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="Android, iOS App-கள்">Android and iOS apps</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="Marketplace, SaaS தளங்கள்">Marketplaces and SaaS platforms</span></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-ta="பழைய Software-ஐ மேம்படுத்துதல் அல்லது மாற்றுதல்">Upgrading or moving old software</span></li>
+        </ul>
+        <a class="btn btn-line" href="#plan"><span data-ta="விலை கேளுங்கள்">Get a quote</span></a>
+      </article>
+    </div>
+    <p class="plans-note"><span data-ta="எது பொருந்தும் என்று தெரியவில்லையா? கீழே உள்ள திட்டமிடலில் தொடங்குங்கள். பெரிய திட்டங்களை முக்கியமானவற்றிலிருந்து தொடங்கி கட்டம் கட்டமாக உருவாக்கலாம்.">Not sure which fits? Start with the planner below. Large projects can be built in phases, starting with what matters most.</span></p>
+  </div>
+</section>
+
+<section id="plan" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap planner">
+    <div>
+      <h2><span data-ta="2 நிமிடத்தில் உங்கள் App-ஐத் திட்டமிடுங்கள்">Plan your app in 2 minutes</span></h2>
+      <p class="lede" style="margin-top:16px"><span data-ta="சில எளிய கேள்விகளுக்குப் பதில் சொல்லுங்கள். தெளிவான விவரம் கிடைத்ததும் யோசனைகள், கால அட்டவணை, நிலையான விலையுடன் உங்களைத் தொடர்புகொள்வேன்.">Answer a few quick questions. I’ll get a clear brief and come back with ideas, a timeline and a fixed price.</span></p>
+      <div class="why-plan">
+        <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><span data-ta="தொழில்நுட்ப அறிவு தேவையில்லை. உங்களுக்குப் பொருத்தமானதைத் தேர்ந்தெடுங்கள்.">No technical knowledge needed. Pick what sounds closest.</span></span></div>
+        <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><span data-ta="உங்கள் பதில்கள் நேரடியாக என் WhatsApp அல்லது Email-க்கு வரும். இந்தத் தளத்தில் எதுவும் சேமிக்கப்படாது.">Your answers go straight to my WhatsApp or email. Nothing is stored on this site.</span></span></div>
+        <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><span data-ta="எந்தக் கட்டாயமும் இல்லை. முதல் ஆலோசனை இலவசம்.">No obligation. The first conversation is free.</span></span></div>
+      </div>
+    </div>
+
+    <form class="card" id="planner" novalidate>
+      <div class="progress" aria-hidden="true"><i id="bar" style="width:16%"></i></div>
+      <p id="stepcount" style="color:var(--muted);font-size:15px;margin-bottom:10px">Step 1 of 6</p>
+
+      <fieldset class="stepq on" data-name="business" data-type="radio">
+        <legend><span data-ta="நீங்கள் என்ன தொழில் செய்கிறீர்கள்?">What kind of business do you run?</span></legend>
+        <p class="hint"><span data-ta="மிக நெருக்கமானதைத் தேர்ந்தெடுங்கள்.">Choose the closest one.</span></p>
+        <div class="opts" id="q-business"></div>
+      </fieldset>
+
+      <fieldset class="stepq" data-name="needs" data-type="check">
+        <legend><span data-ta="நீங்கள் என்ன உருவாக்க விரும்புகிறீர்கள்?">What would you like to build?</span></legend>
+        <p class="hint"><span data-ta="எத்தனை வேண்டுமானாலும் தேர்ந்தெடுக்கலாம்.">Pick as many as you like.</span></p>
+        <div class="opts" id="q-needs"></div>
+      </fieldset>
+
+      <fieldset class="stepq" data-name="users" data-type="radio">
+        <legend><span data-ta="இதை யார் பயன்படுத்துவார்கள்?">Who will use it?</span></legend>
+        <p class="hint"><span data-ta="Website, App அல்லது இரண்டுமா என்று முடிவு செய்ய இது உதவும்.">This helps decide between a website, an app or both.</span></p>
+        <div class="opts" id="q-users"></div>
+      </fieldset>
+
+      <fieldset class="stepq" data-name="today" data-type="radio">
+        <legend><span data-ta="இப்போது இதை எப்படி நிர்வகிக்கிறீர்கள்?">How do you manage this today?</span></legend>
+        <p class="hint"><span data-ta="தயங்காமல் சொல்லுங்கள் — காகிதம்தான் பெரும்பாலும்.">Be honest — paper is very common.</span></p>
+        <div class="opts" id="q-today"></div>
+      </fieldset>
+
+      <fieldset class="stepq" data-name="when" data-type="radio">
+        <legend><span data-ta="எப்போது தொடங்க விரும்புகிறீர்கள்?">When would you like to start?</span></legend>
+        <p class="hint"><span data-ta="தோராயமாகச் சொன்னால் போதும்.">Just a rough idea.</span></p>
+        <div class="opts" id="q-when"></div>
+      </fieldset>
+
+      <fieldset class="stepq" data-name="about" data-type="fields">
+        <legend><span data-ta="உங்களைப் பற்றிக் கொஞ்சம் சொல்லுங்கள்">Tell me a little about you</span></legend>
+        <p class="hint"><span data-ta="உங்கள் பெயர் மட்டும் கட்டாயம்.">Only your name is required.</span></p>
+        <div class="fields">
+          <label class="f"><span data-ta="உங்கள் பெயர்">Your name</span><input name="name" autocomplete="name" required></label>
+          <label class="f"><span data-ta="தொழில் பெயர்">Business name</span><input name="bizname" autocomplete="organization"></label>
+          <label class="f"><span data-ta="ஊர்">City</span><input name="city" autocomplete="address-level2"></label>
+          <label class="f"><span data-ta="உத்தேச பட்ஜெட் (விருப்பம்)">Budget in mind (optional)</span><input name="budget" placeholder="Not sure is fine" data-ta-ph="தெரியவில்லை என்றாலும் பரவாயில்லை"></label>
+          <label class="f full"><span data-ta="வேறு ஏதாவது தெரிவிக்க வேண்டுமா?">Anything else I should know?</span><textarea name="details" placeholder="e.g. 3 branches, 10 staff, want customers to order on WhatsApp" data-ta-ph="உ.ம். 3 கிளைகள், 10 ஊழியர்கள், வாடிக்கையாளர்கள் WhatsApp-இல் ஆர்டர் செய்ய வேண்டும்"></textarea></label>
+        </div>
+      </fieldset>
+
+      <div class="stepq" id="done" data-type="done">
+        <h3 style="font-size:24px;margin-bottom:6px"><span data-ta="உங்கள் விவரம் தயார்">Your brief is ready</span></h3>
+        <p class="hint" style="color:var(--muted);margin-bottom:18px"><span data-ta="இப்போதே அனுப்புங்கள், அடுத்த படிகளுடன் பதில் அளிப்பேன்.">Send it now and I’ll reply with next steps.</span></p>
+        <div class="summary" id="summary"></div>
+        <div class="send">
+          <a class="btn btn-accent" id="send-wa" href="#" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span data-ta="WhatsApp-இல் அனுப்புங்கள்">Send on WhatsApp</span></a>
+          <a class="btn btn-line" id="send-mail" href="#"><span data-ta="Email மூலம் அனுப்புங்கள்">Send by email</span></a>
+        </div>
+      </div>
+
+      <p class="err" id="err" role="alert"></p>
+      <div class="nav-row">
+        <button type="button" class="btn btn-line" id="back" hidden><span data-ta="பின்செல்">Back</span></button>
+        <button type="button" class="btn btn-dark" id="next" style="margin-left:auto">Next</button>
+      </div>
+    </form>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-head">
-      <h2>Why work with me</h2>
-    </div>
-    <div class="why">
-      <div><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Fixed, affordable price</h3><p>A written scope and price before any code is written. If the work is smaller than it looked, I say so.</p></div>
-      <div><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Progress you can see</h3><p>Weekly demos against agreed milestones, so you always know where your project stands.</p></div>
-      <div><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>You own everything</h3><p>Code lives in your repository and your cloud account from day one. Nothing depends on me at handover.</p></div>
-      <div><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Enterprise-grade quality</h3><p>Secure, tested and built to scale — the standards I use on enterprise healthcare and cloud projects.</p></div>
-      <div><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Faster with AI</h3><p>AI coding assistants in daily delivery mean shorter timelines and lower quotes than they used to be.</p></div>
-      <div><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Support after launch</h3><p>Monitoring, fixes and new features on a monthly plan, for teams with no in-house engineer.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>From idea to launch</h2>
-    </div>
+    <div class="head"><h2><span data-ta="நாம் எப்படி இணைந்து செயல்படுவோம்">How we work together</span></h2></div>
     <ol class="steps">
-      <li><h3>Tell me your idea</h3><p>A WhatsApp message or email is enough. The first conversation is free.</p></li>
-      <li><h3>Get a scope and price</h3><p>Features, milestones, timeline and a fixed price in writing.</p></li>
-      <li><h3>See the design</h3><p>Screens you can review and change before development starts.</p></li>
-      <li><h3>Watch it get built</h3><p>Weekly demos in your own repository and cloud account.</p></li>
-      <li><h3>Launch and grow</h3><p>Go live, then ongoing support and new features when you need them.</p></li>
+      <li><h3><span data-ta="உங்கள் யோசனையைச் சொல்லுங்கள்">Tell me your idea</span></h3><p><span data-ta="திட்டமிடல், WhatsApp அல்லது Email மூலம் தொடர்புகொள்ளுங்கள். முதல் ஆலோசனை இலவசம்.">Use the planner, WhatsApp or email. The first conversation is free.</span></p></li>
+      <li><h3><span data-ta="நிலையான விலையைப் பெறுங்கள்">Get a fixed price</span></h3><p><span data-ta="அம்சங்கள், கட்டங்கள், கால அட்டவணை, விலையுடன் எழுத்துப்பூர்வ திட்டம்.">A written scope with features, milestones, timeline and price.</span></p></li>
+      <li><h3><span data-ta="வடிவமைப்பை அங்கீகரியுங்கள்">Approve the design</span></h3><p><span data-ta="உருவாக்கம் தொடங்கும் முன் திரைகளைப் பார்த்து மாற்றங்களைக் கேளுங்கள்.">See your screens and ask for changes before development starts.</span></p></li>
+      <li><h3><span data-ta="உருவாவதைப் பாருங்கள்">Watch it being built</span></h3><p><span data-ta="ஒவ்வொரு வாரமும் செயல்படும் டெமோ — முன்னேற்றம் எப்போதும் தெரியும்.">A working demo every week, so you always know the progress.</span></p></li>
+      <li><h3><span data-ta="தொடங்கி வளருங்கள்">Launch and grow</span></h3><p><span data-ta="App-ஐ வெளியிட்டு, ஊழியர்களுக்குப் பயிற்சி அளித்து, தேவைப்படும்போது புதிய அம்சங்களைச் சேர்க்கலாம்.">Go live, train your staff, then add features when you need them.</span></p></li>
     </ol>
   </div>
 </section>
 
-<section id="experience">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Experience</h2>
-      <p class="lede">Six years building and running production software across healthcare, real-time communications and cloud consulting.</p>
+<section id="about" style="background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap about">
+    <div>
+      <div class="me"><div class="avatar" aria-hidden="true">PS</div><div><b>Prabu S</b><span><span data-ta="நிறுவனர், Trueforge AI">Founder, Trueforge AI</span></span></div></div>
+      <h2 style="font-size:clamp(28px,3.4vw,40px)"><span data-ta="பெரு நிறுவனத் தரம், சிறு தொழில் விலையில்.">Enterprise-grade engineering, at a small-business price.</span></h2>
+      <p class="lede" style="margin-top:18px"><span data-ta="ஆறு ஆண்டுகளாக சுகாதாரம், தகவல் தொடர்பு, Cloud ஆலோசனைத் துறைகளில் பெரிய நிறுவனங்களுக்கு Software உருவாக்கியிருக்கிறேன். இப்போது அதே தரத்தை எல்லா அளவிலான தொழில்களுக்கும் தருகிறேன் — விற்பனைக் குழுவுடன் அல்ல, உங்கள் App-ஐ உருவாக்கும் பொறியாளருடனேயே நேரடியாகப் பேசுவீர்கள்.">For six years I’ve built software for large companies in healthcare, communications and cloud consulting. Now I bring the same quality to businesses of every size — and you deal directly with the engineer building your app, not a sales team.</span></p>
+      <div class="creds">
+        <div><b><span data-ta="6 ஆண்டுகள்">6 years</span></b><span><span data-ta="பெரு நிறுவன Software அனுபவம்">building enterprise software</span></span></div>
+        <div><b>AWS Solutions Architect</b><span><span data-ta="Professional சான்றிதழ்">Professional certified</span></span></div>
+        <div><b>Terraform Associate</b><span><span data-ta="HashiCorp சான்றிதழ்">HashiCorp certified</span></span></div>
+        <div><b>Web, mobile, cloud, AI</b><span><span data-ta="ஒருவரே, முழு தயாரிப்பு">one person, whole product</span></span></div>
+      </div>
     </div>
-    <div class="timeline">
-      <div class="role">
-        <div class="when"><b>Lead Software Engineer</b>Capsa Healthcare<br>Aug 2026 – present</div>
-        <div>
-          <ul>
-            <li>Leading the modernization of a legacy order-processing workflow from PHP and MSSQL stored procedures to .NET microservices, using MassTransit and the Saga pattern.</li>
-            <li>Owned the system assessment, target architecture and incremental migration path.</li>
-            <li>Recovered and documented business rules that existed only inside the legacy code, making the replacement safe to roll out.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="role">
-        <div class="when"><b>Senior Engineer II</b>EY<br>Nov 2025 – Aug 2026</div>
-        <div>
-          <ul>
-            <li>Led migration of enterprise applications and containerized workloads from on-premises infrastructure to AWS EKS.</li>
-            <li>Built .NET Core and ASP.NET Web API services with REST and SOAP endpoints on a microservices architecture.</li>
-            <li>Set up CI/CD with GitHub Actions and monitoring with CloudWatch and Grafana.</li>
-            <li>Worked directly with client stakeholders from requirements through delivery.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="role">
-        <div class="when"><b>Senior Engineer</b>Presidio<br>Jun 2023 – Nov 2025</div>
-        <div>
-          <ul>
-            <li>Developed scalable full-stack applications with .NET Core, React and microservices.</li>
-            <li>Built REST APIs and SOAP services for enterprise integration on Azure and Azure SQL.</li>
-            <li>Managed CI/CD and infrastructure with GitHub Actions, Terraform and Azure DevOps; deployed with Docker and Kubernetes across Azure and AWS.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="role">
-        <div class="when"><b>Software Engineer, then Associate Software Developer</b>Presidio<br>Nov 2020 – Jun 2023</div>
-        <div>
-          <ul>
-            <li>Designed event-driven microservices on Docker, Kubernetes and AWS ECS, with Node.js, .NET and Apache Kafka.</li>
-            <li>Delivered cloud applications across Azure, AWS and Google Cloud for workflow automation.</li>
-            <li>Integrated Azure SQL, MongoDB and communication platforms for real-time healthcare systems.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="work">
+      <article><h3><span data-ta="சுகாதார AI தளம்">Healthcare AI platform</span></h3><p><span data-ta="பேச்சை எழுத்தாக்குதல், மருத்துவ ஆவணங்களில் ஸ்மார்ட் தேடல், சுருக்கங்கள், AI உதவியுடன் நோயறிதல் — AWS-இல் முழுமையாக உருவாக்கப்பட்டது.">Speech-to-text, smart search across medical documents, summaries and AI-assisted diagnostics, built end to end on AWS.</span></p></article>
+      <article><h3><span data-ta="மீண்டும் பயன்படுத்தக்கூடிய Chatbot அமைப்பு">Reusable chatbot system</span></h3><p><span data-ta="பல வாடிக்கையாளர் Chatbot-களில் பயன்படுத்தப்பட்ட Chat இடைமுகம், AI சேவை அடுக்கு — ஒவ்வொரு புதிய Chatbot-உம் வேகமாகத் தொடங்கும்.">Chat interface and AI service layer reused across several client chatbots, so each new one launches faster.</span></p></article>
+      <article><h3><span data-ta="பெரு நிறுவன வணிக App-கள்">Enterprise business applications</span></h3><p><span data-ta="React, Angular, .NET, Node.js கொண்டு பெரிய வாடிக்கையாளர்களுக்கான Web App-கள், Azure, AWS-இல் பாதுகாப்பாக இயங்குகின்றன.">Web applications for large clients with React, Angular, .NET and Node.js, running securely on Azure and AWS.</span></p></article>
+      <details class="exp">
+        <summary><span data-ta="முழு பணி அனுபவத்தைப் பார்க்க">See full work experience</span></summary>
+        <div class="role"><b>Lead Software Engineer</b><span>Capsa Healthcare · Aug 2026 – present</span><p><span data-ta="பழைய ஆர்டர் செயலாக்க அமைப்பை .NET Microservices-ஆக நவீனப்படுத்துதல்.">Modernizing a legacy order-processing system into .NET microservices.</span></p></div>
+        <div class="role"><b>Senior Engineer II</b><span>EY · Nov 2025 – Aug 2026</span><p><span data-ta="நிறுவன App-களை On-premises சர்வர்களிலிருந்து AWS-க்கு மாற்றினேன்; .NET சேவைகள், CI/CD, கண்காணிப்பு அமைத்தேன்.">Moved enterprise applications from on-premises servers to AWS; built .NET services, CI/CD and monitoring.</span></p></div>
+        <div class="role"><b>Senior Engineer</b><span>Presidio · Jun 2023 – Nov 2025</span><p><span data-ta=".NET Core, React கொண்டு Azure, AWS-இல் தானியங்கி Deployment உடன் Full-stack App-கள்.">Full-stack applications with .NET Core and React on Azure and AWS, with automated deployments.</span></p></div>
+        <div class="role"><b>Software Engineer, then Associate Software Developer</b><span>Presidio · Nov 2020 – Jun 2023</span><p><span data-ta="நிகழ்நேர சுகாதார, பணிப்பாய்வு அமைப்புகளுக்கான Event-driven Microservices, Cloud App-கள்.">Event-driven microservices and cloud applications for real-time healthcare and workflow systems.</span></p></div>
+        <div class="role"><b><span data-ta="தொழில்நுட்பம்">Technology</span></b><span>React, Angular, .NET, Node.js, Python, AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform, LLMs, RAG, AI agents</span></div>
+      </details>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section id="faq">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Selected projects</h2>
-    </div>
-    <div class="projects">
-      <article class="proj">
-        <h3>AIGen — healthcare AI platform</h3>
-        <p>Cloud platform for speech-to-text, semantic search across medical documents, summarization and AI-assisted diagnostics. Built end to end: upload and review screens, retrieval pipeline, vector store and AWS infrastructure.</p>
-        <div class="tags"><span>React</span><span>Python</span><span>Vector database</span><span>AWS</span></div>
-      </article>
-      <article class="proj">
-        <h3>Chat Accelerator — reusable chatbot modules</h3>
-        <p>Chat interface, model-calling service layer and integration points for enterprise chatbots, reused across multiple client projects so each new build starts from something working.</p>
-        <div class="tags"><span>React</span><span>Node.js</span><span>.NET</span><span>LLM APIs</span></div>
-      </article>
-      <article class="proj">
-        <h3>Enterprise full-stack applications</h3>
-        <p>Client applications built over several years: React and Angular front ends on .NET Core and Node.js services, with Azure SQL, SQL Server and MongoDB, deployed as containers on Azure and AWS.</p>
-        <div class="tags"><span>React</span><span>Angular</span><span>.NET Core</span><span>Kubernetes</span></div>
-      </article>
-      <article class="proj">
-        <h3>Event-driven microservices framework</h3>
-        <p>Serverless reference architecture with AWS CDK and event-driven patterns — the starting point for systems that need to scale by events rather than request volume.</p>
-        <div class="tags"><span>.NET</span><span>Serverless</span><span>AWS CDK</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Technology</h2>
-    </div>
-    <dl class="stack">
-      <dt>Languages</dt><dd>C#, .NET Core, ASP.NET Web API, Node.js, Python, JavaScript, TypeScript</dd>
-      <dt>Front end</dt><dd>React, Angular, HTML5, CSS3</dd>
-      <dt>AI</dt><dd>LLM APIs, retrieval-augmented generation, AI agents, vector databases, embeddings, semantic search, speech-to-text, prompt engineering, Claude Code, GitHub Copilot</dd>
-      <dt>Architecture</dt><dd>Microservices, event-driven architecture, Saga pattern, MassTransit, REST, SOAP, serverless</dd>
-      <dt>Cloud</dt><dd>AWS, Microsoft Azure, Google Cloud, EKS, ECS, Lambda, Azure SQL</dd>
-      <dt>Infrastructure</dt><dd>Docker, Kubernetes, Terraform, AWS CDK, CloudFormation, GitHub Actions, Azure DevOps</dd>
-      <dt>Data</dt><dd>SQL Server, Azure SQL, MongoDB, Apache Kafka</dd>
-      <dt>Operations</dt><dd>Amazon CloudWatch, Grafana, incident response, production support</dd>
-    </dl>
-    <div class="certs">
-      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>AWS Certified Solutions Architect – Professional</span>
-      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>HashiCorp Certified: Terraform Associate</span>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Common questions</h2>
-    </div>
+    <div class="head"><h2><span data-ta="தொழில் உரிமையாளர்கள் கேட்கும் கேள்விகள்">Questions business owners ask</span></h2></div>
     <div class="faq">
-      <details><summary>How much does an app cost?</summary><p>It depends on the features you need. After a free conversation you get a written scope with a fixed price, so there are no surprises. Larger projects can be split into phases, starting with the parts that matter most.</p></details>
-      <details><summary>How long does it take?</summary><p>Your scope includes milestones and a timeline. You see working progress every week, and simpler apps can launch quickly with more features added later.</p></details>
-      <details><summary>Do I own the code?</summary><p>Yes. Everything lives in your repository and your cloud account from the first day.</p></details>
-      <details><summary>Can you build for both Android and iOS?</summary><p>Yes, and the mobile app can share one back end with your web app, so data stays in sync everywhere.</p></details>
-      <details><summary>I already have software. Can you improve it?</summary><p>Yes. I can add features, fix performance problems, move it to the cloud, add AI, or rebuild it in stages without stopping your business.</p></details>
-      <details><summary>Do you work with clients outside India?</summary><p>Yes. I work remotely with clients worldwide.</p></details>
-      <details><summary>What happens after launch?</summary><p>I offer monthly support for monitoring, fixes and new features, or a clean handover to your own team.</p></details>
+      <details><summary><span data-ta="எனக்குத் தொழில்நுட்பம் தெரியாது. இருந்தாலும் இது சாத்தியமா?">I’m not technical. Can I still do this?</span></summary><p><span data-ta="ஆம். உங்கள் தொழில் எப்படிச் செயல்படுகிறது என்று உங்கள் வார்த்தைகளில் சொல்லுங்கள், அதை நான் App-ஆக மாற்றுவேன். நீங்கள் திரைகளையும் டெமோக்களையும் பார்த்தால் போதும் — தொழில்நுட்ப முடிவுகள் எதுவும் உங்களுக்குத் தேவையில்லை.">Yes. You explain how your business works in your own words, and I turn that into the app. You review screens and demos — no technical decisions needed from you.</span></p></details>
+      <details><summary><span data-ta="எவ்வளவு செலவாகும்?">How much will it cost?</span></summary><p><span data-ta="அம்சங்களைப் பொறுத்தது. இலவச ஆலோசனைக்குப் பிறகு எழுத்துப்பூர்வ நிலையான விலை கிடைக்கும், எதிர்பாராத கட்டணம் இருக்காது. சிறிதாகத் தொடங்கி பிறகு அம்சங்களைச் சேர்க்கலாம்.">It depends on the features. After a free conversation you get a written, fixed price, so there are no surprises. You can start small and add features later.</span></p></details>
+      <details><summary><span data-ta="எவ்வளவு நாள் ஆகும்?">How long does it take?</span></summary><p><span data-ta="உங்கள் விலை மதிப்பீட்டில் கட்டங்களுடன் கால அட்டவணை இருக்கும். ஒவ்வொரு வாரமும் செயல்படும் டெமோ பார்க்கலாம்; எளிய App-கள் விரைவில் தொடங்கலாம்.">Your quote includes a timeline with milestones. You see a working demo every week, and simpler apps can launch quickly.</span></p></details>
+      <details><summary><span data-ta="மொபைல் போனில் இயங்குமா?">Will it work on mobile phones?</span></summary><p><span data-ta="ஆம். ஒவ்வொரு Website-உம் Web App-உம் போனில் இயங்கும். அதே தரவைப் பகிரும் Android, iOS App-களையும் உருவாக்கித் தருவேன்.">Yes. Every website and web app works on phones, and I can also build Android and iOS apps that share the same data.</span></p></details>
+      <details><summary><span data-ta="என் வணிகத் தரவு பாதுகாப்பாக இருக்குமா?">Is my business data safe?</span></summary><p><span data-ta="உங்கள் App பேக்கப், ஊழியர் லாகின், பொறுப்பு அடிப்படையிலான அணுகலுடன் பாதுகாப்பான Cloud-இல் இயங்கும் — பெரு நிறுவன சுகாதாரத் திட்டங்களில் நான் பின்பற்றும் அதே முறைகளுடன்.">Your app runs on secure cloud hosting with backups, staff logins and role-based access, using the same practices I follow on enterprise healthcare projects.</span></p></details>
+      <details><summary><span data-ta="App எனக்குச் சொந்தமா?">Do I own the app?</span></summary><p><span data-ta="ஆம். முதல் நாளிலிருந்தே Code-உம் ஹோஸ்டிங்கும் உங்கள் சொந்தக் கணக்குகளில் இருக்கும். ஒப்படைத்த பிறகு எதுவும் என்னைச் சார்ந்திருக்காது.">Yes. The code and hosting are in your own accounts from day one. Nothing depends on me after handover.</span></p></details>
+      <details><summary><span data-ta="வெளியீட்டுக்குப் பிறகு மாற்றங்கள் தேவைப்பட்டால்?">What if I need changes after launch?</span></summary><p><span data-ta="திருத்தங்கள், புதுப்பிப்புகள், புதிய அம்சங்களுக்கு மாதாந்திர ஆதரவு தருகிறேன், அல்லது உங்கள் குழுவிடம் முழுமையாக ஒப்படைக்கிறேன்.">I offer monthly support for fixes, updates and new features, or a clean handover to your own team.</span></p></details>
+      <details><summary><span data-ta="இந்தியாவுக்கு வெளியே உள்ள வாடிக்கையாளர்களுடனும் வேலை செய்கிறீர்களா?">Do you work with clients outside India?</span></summary><p><span data-ta="ஆம். உலகின் எந்தப் பகுதியில் உள்ள வாடிக்கையாளருடனும் ஆன்லைனில் இணைந்து செயல்படுகிறேன்.">Yes. I work remotely with clients anywhere.</span></p></details>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section style="padding-top:0">
   <div class="wrap">
-    <div class="contact">
+    <div class="final">
       <div>
-        <h2>Let’s build your app.</h2>
-        <p>Tell me what your business needs. You’ll get a scope, a timeline and a fixed price. The first conversation costs nothing.</p>
+        <h2><span data-ta="உங்கள் App-ஐ உருவாக்குவோம்.">Let’s build your app.</span></h2>
+        <p><span data-ta="உங்கள் தொழிலுக்கு என்ன தேவை என்று சொல்லுங்கள். திட்ட விவரம், கால அட்டவணை, நிலையான விலை கிடைக்கும் — முதல் ஆலோசனைக்குக் கட்டணம் இல்லை.">Tell me what your business needs. You’ll get a scope, a timeline and a fixed price — and the first conversation costs nothing.</span></p>
       </div>
-      <div class="contact-list">
-        <a href="https://wa.me/918825851811" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp +91 88258 51811</a>
-        <a href="tel:+918825851811"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call +91 88258 51811</a>
-        <a href="mailto:prabusampath007@gmail.com?subject=Project%20enquiry"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path></svg>prabusampath007@gmail.com</a>
-        <a href="https://www.linkedin.com/in/prabu-s-a1893018b" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>Connect on LinkedIn</a>
+      <div class="clist">
+        <a href="https://wa.me/918825851811" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp +91 88258 51811</a>
+        <a href="tel:+918825851811"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span data-ta="அழைக்க +91 88258 51811">Call +91 88258 51811</span></a>
+        <a href="mailto:prabusampath007@gmail.com?subject=Project%20enquiry"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>prabusampath007@gmail.com</a>
+        <a href="https://www.linkedin.com/in/prabu-s-a1893018b" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span data-ta="LinkedIn-இல் இணையுங்கள்">Connect on LinkedIn</span></a>
       </div>
     </div>
   </div>
@@ -470,10 +675,257 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <footer>
   <div class="wrap">
-    <span>© 2026 NexaForge AI · Prabu S, freelance software and cloud engineer</span>
-    <span>Remote, worldwide</span>
+    <span>© 2026 Trueforge AI · Prabu S</span>
+    <span>Web apps · Mobile apps · Cloud · AI agents</span>
   </div>
 </footer>
 
+<a class="wa" href="https://wa.me/918825851811?text=Hi%20Prabu%2C%20I%27d%20like%20to%20discuss%20an%20app%20for%20my%20business." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span><span data-ta="WhatsApp-இல் பேசுங்கள்">Chat on WhatsApp</span></span>
+</a>
+
+<script>
+(function(){
+  var PHONE = '918825851811';
+  var EMAIL = 'prabusampath007@gmail.com';
+  var check = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>';
+  var lang = 'en';
+
+  var UI = {
+    en:{step:function(a,b){return 'Step '+a+' of '+b;}, done:'All done', next:'Next', create:'Create my brief',
+        e1:'Please choose one option.', e2:'Please choose at least one option.', e3:'Please add your name.',
+        hi:'Hi Prabu, I’d like a quote for an app.', biz:'Business type', needs:'Needs', users:'Users', today:'Today we use',
+        start:'Start', budget:'Budget', name:'Name', bizname:'Business name', city:'City', details:'Details', subject:'App enquiry from ',
+        title:'Trueforge AI — Apps, software and AI for your business'},
+    ta:{step:function(a,b){return 'படி '+a+' / '+b;}, done:'முடிந்தது', next:'அடுத்து', create:'விவரத்தை உருவாக்கு',
+        e1:'ஒரு விருப்பத்தைத் தேர்ந்தெடுங்கள்.', e2:'குறைந்தது ஒன்றைத் தேர்ந்தெடுங்கள்.', e3:'உங்கள் பெயரைச் சேர்க்கவும்.',
+        hi:'வணக்கம் பிரபு, எனக்கு ஒரு App-க்கு விலை மதிப்பீடு வேண்டும்.', biz:'தொழில் வகை', needs:'தேவைகள்', users:'பயனர்கள்', today:'இப்போது பயன்படுத்துவது',
+        start:'தொடக்கம்', budget:'பட்ஜெட்', name:'பெயர்', bizname:'தொழில் பெயர்', city:'ஊர்', details:'விவரங்கள்', subject:'App விசாரணை - ',
+        title:'Trueforge AI — உங்கள் தொழிலுக்கான App, Software, AI'}
+  };
+
+  /* ---------- industry explorer ---------- */
+  var IND = [
+    {id:'pharmacy', vals:['₹48,200','136','9'],
+      en:{label:'Pharmacy', title:'Your Pharmacy · Today', sub:'Bill faster, never run out of stock and stop losing money to expired medicines. Customers can order on WhatsApp and pick up.',
+        tiles:['Sales','Bills','Low stock'], rows:[['Paracetamol 500mg · 12 left','Reorder'],['Amoxicillin 250mg','Expires 30 Nov'],['Supplier order #482','Arriving today']],
+        feats:['GST billing with barcode scanning','Stock and expiry alerts','Supplier purchase orders','Customer and prescription history','Daily sales report on your phone']},
+      ta:{label:'மருந்தகம்', title:'உங்கள் மருந்தகம் · இன்று', sub:'வேகமாக பில் போடுங்கள், ஸ்டாக் தீர்ந்துபோகாமல் பாருங்கள், காலாவதியான மருந்துகளால் நஷ்டம் வேண்டாம். வாடிக்கையாளர்கள் WhatsApp-இல் ஆர்டர் செய்து வந்து வாங்கலாம்.',
+        tiles:['விற்பனை','பில்கள்','குறைந்த ஸ்டாக்'], rows:[['Paracetamol 500mg · 12 மீதம்','மறு ஆர்டர்'],['Amoxicillin 250mg','30 நவ. காலாவதி'],['சப்ளையர் ஆர்டர் #482','இன்று வரும்']],
+        feats:['பார்கோடு ஸ்கேனுடன் GST பில்லிங்','ஸ்டாக், காலாவதி எச்சரிக்கைகள்','சப்ளையர் கொள்முதல் ஆர்டர்கள்','வாடிக்கையாளர், மருந்துச்சீட்டு வரலாறு','தினசரி விற்பனை ரிப்போர்ட் உங்கள் போனில்']}},
+    {id:'clinic', vals:['24','3','11'],
+      en:{label:'Clinic & hospital', title:'Your Clinic · Today', sub:'Fill more appointment slots with online booking, cut no-shows with reminders and keep every record in one place.',
+        tiles:['Appointments','Waiting','Booked online'], rows:[['10:30 · Priya R','Follow-up'],['11:00 · Arun K','New patient'],['11:30 · Meena S','Video consult']],
+        feats:['Online appointment booking','Patient records and e-prescriptions','WhatsApp and SMS reminders','Video consultations','Billing and lab reports']},
+      ta:{label:'கிளினிக் & மருத்துவமனை', title:'உங்கள் கிளினிக் · இன்று', sub:'ஆன்லைன் புக்கிங்கால் அதிக அப்பாயின்ட்மென்ட்களைப் பெறுங்கள், நினைவூட்டல்களால் வராமல் போவதைக் குறையுங்கள், எல்லாப் பதிவுகளையும் ஒரே இடத்தில் வைத்திருங்கள்.',
+        tiles:['அப்பாயின்ட்மென்ட்','காத்திருப்பு','ஆன்லைன் புக்கிங்'], rows:[['10:30 · பிரியா R','ஃபாலோ-அப்'],['11:00 · அருண் K','புதிய நோயாளி'],['11:30 · மீனா S','வீடியோ ஆலோசனை']],
+        feats:['ஆன்லைன் அப்பாயின்ட்மென்ட் புக்கிங்','நோயாளர் பதிவுகள், e-மருந்துச்சீட்டு','WhatsApp, SMS நினைவூட்டல்கள்','வீடியோ ஆலோசனை','பில்லிங், லேப் ரிப்போர்ட்கள்']}},
+    {id:'shop', vals:['58','₹1.2L','14'],
+      en:{label:'Shop & e-commerce', title:'Your Store · Today', sub:'Reach customers across the country with your own store, and bring them back with offers and loyalty points.',
+        tiles:['Orders','Revenue','To ship'], rows:[['Order #1042','Packed'],['Order #1041','Out for delivery'],['Order #1040','Delivered']],
+        feats:['Online store and mobile app','UPI, card and COD payments','Order and delivery tracking','Stock synced with your shop','Offers, coupons and loyalty']},
+      ta:{label:'கடை & ஆன்லைன் விற்பனை', title:'உங்கள் ஸ்டோர் · இன்று', sub:'சொந்த ஆன்லைன் ஸ்டோர் மூலம் நாடு முழுவதும் வாடிக்கையாளர்களை அடையுங்கள், ஆஃபர்கள், லாயல்டி பாயிண்ட்களால் அவர்களைத் திரும்ப வரவழையுங்கள்.',
+        tiles:['ஆர்டர்கள்','வருமானம்','அனுப்ப வேண்டியவை'], rows:[['ஆர்டர் #1042','பேக் செய்யப்பட்டது'],['ஆர்டர் #1041','டெலிவரிக்குச் சென்றுள்ளது'],['ஆர்டர் #1040','டெலிவர் ஆனது']],
+        feats:['ஆன்லைன் ஸ்டோர், Mobile App','UPI, கார்டு, COD பேமெண்ட்','ஆர்டர், டெலிவரி டிராக்கிங்','கடையுடன் இணைந்த ஸ்டாக்','ஆஃபர்கள், கூப்பன்கள், லாயல்டி']}},
+    {id:'school', vals:['1,240','96%','38'],
+      en:{label:'School & coaching', title:'Your School · Today', sub:'Collect fees on time, save staff hours on attendance and reports, and attract more admissions online.',
+        tiles:['Students','Attendance','Fees due'], rows:[['Class 8B · Maths test','Friday'],['Fee reminders','Sent to 38 parents'],['Live class · Physics','4:00 PM']],
+        feats:['Student and parent portal','Online classes and exams','Attendance tracking','Online fee collection','Results and report cards']},
+      ta:{label:'பள்ளி & பயிற்சி மையம்', title:'உங்கள் பள்ளி · இன்று', sub:'கட்டணத்தைச் சரியான நேரத்தில் வசூலியுங்கள், வருகைப்பதிவு, ரிப்போர்ட்களில் ஊழியர் நேரத்தைச் சேமியுங்கள், ஆன்லைனில் அதிக சேர்க்கைகளைப் பெறுங்கள்.',
+        tiles:['மாணவர்கள்','வருகை','கட்டண நிலுவை'], rows:[['வகுப்பு 8B · கணிதத் தேர்வு','வெள்ளி'],['கட்டண நினைவூட்டல்','38 பெற்றோருக்கு அனுப்பப்பட்டது'],['நேரலை வகுப்பு · இயற்பியல்','மாலை 4:00']],
+        feats:['மாணவர், பெற்றோர் Portal','ஆன்லைன் வகுப்புகள், தேர்வுகள்','வருகைப்பதிவு','ஆன்லைன் கட்டண வசூல்','மதிப்பெண்கள், ரிப்போர்ட் கார்டுகள்']}},
+    {id:'textile', vals:['27','312','9'],
+      en:{label:'Textile & manufacturing', title:'Your Mill · Today', sub:'Track every order and lot from production to dispatch, and collect dealer dues on time with automatic reminders.',
+        tiles:['In production','Fabric lots','Dispatch'], rows:[['Lot T-584 · Cotton 40s','Dyeing'],['Order #882 · 1,200 m','Ready'],['Kavya Textiles','₹2.4L due']],
+        feats:['Order and production tracking','Lot-wise stock','Dealer accounts and dues','Dispatch and invoices','Owner dashboard']},
+      ta:{label:'ஜவுளி & உற்பத்தி', title:'உங்கள் மில் · இன்று', sub:'உற்பத்தி முதல் அனுப்புதல் வரை ஒவ்வொரு ஆர்டரையும் லாட்டையும் கண்காணியுங்கள், தானியங்கி நினைவூட்டல்களால் டீலர் நிலுவையைச் சரியான நேரத்தில் வசூலியுங்கள்.',
+        tiles:['உற்பத்தியில்','துணி லாட்கள்','இன்று அனுப்புதல்'], rows:[['லாட் T-584 · Cotton 40s','சாயமிடுதல்'],['ஆர்டர் #882 · 1,200 மீ','தயார்'],['காவ்யா டெக்ஸ்டைல்ஸ்','₹2.4L நிலுவை']],
+        feats:['ஆர்டர், உற்பத்தி கண்காணிப்பு','லாட் வாரியான ஸ்டாக்','டீலர் கணக்குகள், நிலுவைகள்','அனுப்புதல், இன்வாய்ஸ்கள்','உரிமையாளர் Dashboard']}},
+    {id:'restaurant', vals:['186','64','11'],
+      en:{label:'Restaurant & café', title:'Your Restaurant · Today', sub:'Serve tables faster, earn more from your own online orders and cut ingredient waste.',
+        tiles:['Orders','Online','Tables busy'], rows:[['Table 4 · 3 items','Preparing'],['Online order #318','Out for delivery'],['Paneer · 2 kg left','Low stock']],
+        feats:['Billing and kitchen tickets','QR menu ordering','Your own online ordering','Ingredient stock tracking','Daily sales reports']},
+      ta:{label:'உணவகம் & கஃபே', title:'உங்கள் உணவகம் · இன்று', sub:'டேபிள்களுக்கு வேகமாகப் பரிமாறுங்கள், சொந்த ஆன்லைன் ஆர்டர்களால் அதிகம் சம்பாதியுங்கள், பொருள் வீணாவதைக் குறையுங்கள்.',
+        tiles:['ஆர்டர்கள்','ஆன்லைன்','பிஸியான டேபிள்கள்'], rows:[['டேபிள் 4 · 3 உணவுகள்','தயாராகிறது'],['ஆன்லைன் ஆர்டர் #318','டெலிவரிக்குச் சென்றுள்ளது'],['பனீர் · 2 கிலோ மீதம்','குறைந்த ஸ்டாக்']],
+        feats:['பில்லிங், கிச்சன் டிக்கெட்','QR மெனு ஆர்டர்','சொந்த ஆன்லைன் ஆர்டர்','சமையல் பொருள் ஸ்டாக்','தினசரி விற்பனை ரிப்போர்ட்']}},
+    {id:'booking', vals:['32','27','1'],
+      en:{label:'Salon, travel & hotels', title:'Your Bookings · Today', sub:'Take bookings and payments 24/7, even when you’re busy, and fill empty slots with automatic offers.',
+        tiles:['Bookings','Paid online','No-shows'], rows:[['9:00 · Hair spa','Confirmed'],['Room 204 · 2 nights','Paid'],['Reminders','Sent to 18 customers']],
+        feats:['24/7 online booking','Slot and room calendar','Online payments','Automatic reminders','Customer reviews']},
+      ta:{label:'சலூன், டிராவல் & ஹோட்டல்', title:'உங்கள் புக்கிங் · இன்று', sub:'நீங்கள் பிஸியாக இருந்தாலும் 24/7 புக்கிங், பேமெண்ட் பெறுங்கள், தானியங்கி ஆஃபர்களால் காலி நேரங்களை நிரப்புங்கள்.',
+        tiles:['புக்கிங்','ஆன்லைன் பேமெண்ட்','வராதவர்கள்'], rows:[['9:00 · ஹேர் ஸ்பா','உறுதி'],['அறை 204 · 2 இரவுகள்','பணம் செலுத்தப்பட்டது'],['நினைவூட்டல்','18 பேருக்கு அனுப்பப்பட்டது']],
+        feats:['24/7 ஆன்லைன் புக்கிங்','நேரம், அறை காலண்டர்','ஆன்லைன் பேமெண்ட்','தானியங்கி நினைவூட்டல்கள்','வாடிக்கையாளர் மதிப்புரைகள்']}},
+    {id:'finance', vals:['842','₹6.8L','12'],
+      en:{label:'Finance & lending', title:'Your Finance Co · Today', sub:'Approve loans faster with digital KYC and improve collections with automatic EMI reminders.',
+        tiles:['Active loans','Collected today','KYC pending'], rows:[['EMI due · 23 customers','Today'],['KYC · Ramesh P','Docs uploaded'],['New loan request','₹1,50,000']],
+        feats:['Loan and EMI management','Digital KYC','Collection tracking','Reports and statements','Secure role-based access']},
+      ta:{label:'நிதி & கடன்', title:'உங்கள் நிதி நிறுவனம் · இன்று', sub:'டிஜிட்டல் KYC மூலம் கடன்களை வேகமாக அங்கீகரியுங்கள், தானியங்கி EMI நினைவூட்டல்களால் வசூலை மேம்படுத்துங்கள்.',
+        tiles:['செயலில் உள்ள கடன்கள்','இன்றைய வசூல்','KYC நிலுவை'], rows:[['EMI · 23 வாடிக்கையாளர்கள்','இன்று'],['KYC · ரமேஷ் P','ஆவணங்கள் பதிவேற்றம்'],['புதிய கடன் கோரிக்கை','₹1,50,000']],
+        feats:['கடன், EMI நிர்வாகம்','டிஜிட்டல் KYC','வசூல் கண்காணிப்பு','ரிப்போர்ட்கள், அறிக்கைகள்','பாதுகாப்பான பொறுப்பு அடிப்படை அணுகல்']}},
+    {id:'ai', vals:['214','189','37'],
+      en:{label:'AI for any business', title:'Your AI Assistant · Today', sub:'An assistant that answers customers, takes orders and handles routine work around the clock.',
+        tiles:['Chats','Resolved','Orders taken'], rows:[['“What are your timings?”','Answered'],['“Book a table for 4”','Booked'],['“Price for bulk order?”','Sent to you']],
+        feats:['WhatsApp and website chatbots','Answers from your own price lists and documents','AI agents that automate routine tasks','Summaries, smart search and voice notes','AI added to apps you already use']},
+      ta:{label:'எந்தத் தொழிலுக்கும் AI', title:'உங்கள் AI உதவியாளர் · இன்று', sub:'வாடிக்கையாளர்களுக்குப் பதில் சொல்லி, ஆர்டர் எடுத்து, வழக்கமான வேலைகளை இரவும் பகலும் பார்த்துக்கொள்ளும் உதவியாளர்.',
+        tiles:['உரையாடல்கள்','தீர்க்கப்பட்டவை','ஆர்டர்கள்'], rows:[['“கடை எத்தனை மணிக்குத் திறக்கும்?”','பதில் அளிக்கப்பட்டது'],['“4 பேருக்கு டேபிள் புக் செய்யுங்கள்”','புக் ஆனது'],['“மொத்த ஆர்டருக்கு விலை?”','உங்களுக்கு அனுப்பப்பட்டது']],
+        feats:['WhatsApp, Website Chatbot-கள்','உங்கள் விலைப்பட்டியல், ஆவணங்களிலிருந்து பதில்கள்','வழக்கமான வேலைகளைத் தானியக்கமாக்கும் AI Agent-கள்','சுருக்கங்கள், ஸ்மார்ட் தேடல், வாய்ஸ் நோட்ஸ்','நீங்கள் பயன்படுத்தும் App-களில் AI']}}
+  ];
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  var tabs = document.getElementById('tabs');
+  var curInd = 0;
+  function show(i){
+    curInd = i;
+    var d = IND[i], t = d[lang];
+    Array.prototype.forEach.call(tabs.children,function(b,j){
+      b.setAttribute('aria-selected', j===i ? 'true':'false'); b.tabIndex = j===i ? 0 : -1;
+      b.textContent = IND[j][lang].label;
+    });
+    document.getElementById('x-title').textContent = t.title;
+    document.getElementById('x-name').textContent = t.label;
+    document.getElementById('x-sub').textContent = t.sub;
+    document.getElementById('x-tiles').innerHTML = t.tiles.map(function(l,k){return '<div class="tile"><small>'+esc(l)+'</small><b>'+esc(d.vals[k])+'</b></div>';}).join('');
+    document.getElementById('x-rows').innerHTML = t.rows.map(function(r){return '<div class="row"><span>'+esc(r[0])+'</span><em>'+esc(r[1])+'</em></div>';}).join('');
+    document.getElementById('x-feats').innerHTML = t.feats.map(function(f){return '<li>'+check+'<span>'+esc(f)+'</span></li>';}).join('');
+    document.getElementById('x-cta').onclick = function(){ preselect(d.en.label); };
+  }
+  IND.forEach(function(d,i){
+    var b = document.createElement('button');
+    b.type='button'; b.className='tab'; b.setAttribute('role','tab');
+    b.addEventListener('click',function(){show(i);});
+    b.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+        var n=(i+(e.key==='ArrowRight'?1:-1)+IND.length)%IND.length; show(n); tabs.children[n].focus(); e.preventDefault();
+      }
+    });
+    tabs.appendChild(b);
+  });
+
+  /* ---------- planner ---------- */
+  var Q = {
+    business:{en:['Pharmacy','Clinic & hospital','Shop & e-commerce','School & coaching','Textile & manufacturing','Restaurant & café','Salon, travel & hotels','Finance & lending','Startup idea','Other'],
+              ta:['மருந்தகம்','கிளினிக் & மருத்துவமனை','கடை & ஆன்லைன் விற்பனை','பள்ளி & பயிற்சி மையம்','ஜவுளி & உற்பத்தி','உணவகம் & கஃபே','சலூன், டிராவல் & ஹோட்டல்','நிதி & கடன்','ஸ்டார்ட்அப் யோசனை','மற்றவை']},
+    needs:{en:['Website','Web app','Mobile app','Billing','Stock / inventory','Online booking','Online store','AI chatbot or agent','Owner dashboard','Upgrade my old software','Not sure yet'],
+           ta:['Website','Web App','Mobile App','பில்லிங்','ஸ்டாக் / இன்வென்டரி','ஆன்லைன் புக்கிங்','ஆன்லைன் ஸ்டோர்','AI Chatbot அல்லது Agent','உரிமையாளர் Dashboard','பழைய Software-ஐ மேம்படுத்த','இன்னும் உறுதியாகத் தெரியவில்லை']},
+    users:{en:['My customers','My staff','Both'], ta:['என் வாடிக்கையாளர்கள்','என் ஊழியர்கள்','இருவரும்']},
+    today:{en:['Paper or notebook','Excel or Google Sheets','Software I’m not happy with','Nothing yet — new idea'],
+           ta:['காகிதம் அல்லது நோட்டுப் புத்தகம்','Excel அல்லது Google Sheets','திருப்தியில்லாத Software','எதுவும் இல்லை — புதிய யோசனை']},
+    when:{en:['As soon as possible','In 1–3 months','Just exploring'], ta:['கூடிய விரைவில்','1–3 மாதங்களில்','சும்மா விசாரிக்கிறேன்']}
+  };
+  Object.keys(Q).forEach(function(k){
+    var box = document.getElementById('q-'+k);
+    var type = k==='needs' ? 'checkbox' : 'radio';
+    box.innerHTML = Q[k].en.map(function(v,i){
+      return '<label class="opt"><input type="'+type+'" name="'+k+'" value="'+esc(v)+'"><span data-k="'+k+'" data-i="'+i+'">'+esc(v)+'</span></label>';
+    }).join('');
+  });
+  function updateOptions(){
+    Array.prototype.forEach.call(document.querySelectorAll('.opt span[data-k]'),function(sp){
+      sp.textContent = Q[sp.getAttribute('data-k')][lang][+sp.getAttribute('data-i')];
+    });
+  }
+  function preselect(label){
+    var r = null;
+    Array.prototype.forEach.call(document.querySelectorAll('input[name="business"]'),function(i){ if(i.value===label) r=i; });
+    if(!r && label==='AI for any business'){ r = document.querySelector('input[name="needs"][value="AI chatbot or agent"]'); }
+    if(r){ r.checked = true; }
+  }
+
+  var form = document.getElementById('planner');
+  var steps = Array.prototype.slice.call(form.querySelectorAll('.stepq'));
+  var cur = 0, total = steps.length - 1;
+  var back = document.getElementById('back'), next = document.getElementById('next'), err = document.getElementById('err');
+
+  function render(){
+    var u = UI[lang];
+    steps.forEach(function(s,i){s.classList.toggle('on', i===cur);});
+    document.getElementById('bar').style.width = Math.round(((cur+1)/(total+1))*100)+'%';
+    document.getElementById('stepcount').textContent = cur<total ? u.step(cur+1,total) : u.done;
+    back.hidden = cur===0;
+    next.hidden = cur===total;
+    next.textContent = cur===total-1 ? u.create : u.next;
+    err.textContent = '';
+  }
+  function labels(name){
+    return Array.prototype.map.call(form.querySelectorAll('input[name="'+name+'"]:checked'),function(i){
+      var idx = Q[name].en.indexOf(i.value); return idx>-1 ? Q[name][lang][idx] : i.value;
+    });
+  }
+  function valid(){
+    var u = UI[lang], s = steps[cur], t = s.getAttribute('data-type'), n = s.getAttribute('data-name');
+    if(t==='radio' && !labels(n).length){ err.textContent=u.e1; return false; }
+    if(t==='check' && !labels(n).length){ err.textContent=u.e2; return false; }
+    if(t==='fields' && !form.elements.name.value.trim()){ err.textContent=u.e3; form.elements.name.focus(); return false; }
+    return true;
+  }
+  function buildBrief(){
+    var u = UI[lang], f = form.elements, L = [u.hi,''];
+    L.push(u.biz+': '+labels('business').join(''));
+    L.push(u.needs+': '+labels('needs').join(', '));
+    L.push(u.users+': '+labels('users').join(''));
+    L.push(u.today+': '+labels('today').join(''));
+    L.push(u.start+': '+labels('when').join(''));
+    if(f.budget.value.trim()) L.push(u.budget+': '+f.budget.value.trim());
+    L.push('');
+    L.push(u.name+': '+f.name.value.trim());
+    if(f.bizname.value.trim()) L.push(u.bizname+': '+f.bizname.value.trim());
+    if(f.city.value.trim()) L.push(u.city+': '+f.city.value.trim());
+    if(f.details.value.trim()){ L.push(''); L.push(u.details+': '+f.details.value.trim()); }
+    var text = L.join('\n');
+    document.getElementById('summary').textContent = text;
+    document.getElementById('send-wa').href = 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(text);
+    document.getElementById('send-mail').href = 'mailto:'+EMAIL+'?subject='+encodeURIComponent(u.subject+f.name.value.trim())+'&body='+encodeURIComponent(text);
+  }
+  next.addEventListener('click',function(){
+    if(!valid()) return;
+    cur++;
+    if(cur===total) buildBrief();
+    render();
+    form.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto':'smooth', block:'start'});
+  });
+  back.addEventListener('click',function(){ if(cur>0){cur--; render();} });
+  form.addEventListener('submit',function(e){e.preventDefault();});
+  form.addEventListener('change',function(e){
+    var s = steps[cur];
+    if(e.target.type==='radio' && s.getAttribute('data-type')==='radio'){ setTimeout(function(){ next.click(); },180); }
+  });
+
+  /* ---------- language switch ---------- */
+  function apply(l){
+    lang = (l==='ta') ? 'ta' : 'en';
+    document.documentElement.lang = lang;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ta]'),function(el){
+      if(el.getAttribute('data-en')===null) el.setAttribute('data-en', el.innerHTML);
+      el.innerHTML = lang==='ta' ? el.getAttribute('data-ta') : el.getAttribute('data-en');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ta-ph]'),function(el){
+      if(el.getAttribute('data-en-ph')===null) el.setAttribute('data-en-ph', el.getAttribute('placeholder')||'');
+      el.setAttribute('placeholder', lang==='ta' ? el.getAttribute('data-ta-ph') : el.getAttribute('data-en-ph'));
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.lang button'),function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang')===lang ? 'true':'false');
+    });
+    document.title = UI[lang].title;
+    show(curInd);
+    updateOptions();
+    render();
+    if(cur===total) buildBrief();
+    try{ localStorage.setItem('nf-lang', lang); }catch(e){}
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.lang button'),function(b){
+    b.addEventListener('click',function(){ apply(b.getAttribute('data-lang')); });
+  });
+
+  var start = 'en';
+  try{
+    var qp = new URLSearchParams(location.search).get('lang');
+    var saved = localStorage.getItem('nf-lang');
+    if(qp==='ta'||qp==='en') start = qp;
+    else if(saved==='ta'||saved==='en') start = saved;
+    else if((navigator.language||'').toLowerCase().indexOf('ta')===0) start = 'ta';
+  }catch(e){}
+  apply(start);
+})();
+</script>
 </body>
 </html>
